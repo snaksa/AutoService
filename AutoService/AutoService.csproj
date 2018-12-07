@@ -96,7 +96,14 @@
     <Compile Include="Forms\PartForms\PartForm.designer.cs">
       <DependentUpon>PartForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\CarColorRepository.cs" />
+    <Compile Include="Models\ModelRepository.cs" />
+    <Compile Include="Models\CarColor.cs" />
+    <Compile Include="Models\CarRepository.cs" />
+    <Compile Include="Models\BrandRepository.cs" />
+    <Compile Include="Models\Model.cs" />
     <Compile Include="Models\Car.cs" />
+    <Compile Include="Models\Brand.cs" />
     <Compile Include="Models\EmployeeRepository.cs" />
     <Compile Include="Models\RepairCard.cs" />
     <Compile Include="Models\Employee.cs" />
