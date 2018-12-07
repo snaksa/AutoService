@@ -23,7 +23,7 @@ namespace AutoService.Models
                     {
                         while (reader.Read())
                         {
-                            return new Employee(reader.GetInt32(0), reader.GetString(1));
+                            return new Employee(reader.GetInt32(0), reader.GetString(1).Trim());
                         }
                     }
                 }
