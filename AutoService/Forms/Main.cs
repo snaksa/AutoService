@@ -33,7 +33,7 @@ namespace AutoService.Forms
 
         private void partsButton_Click(object sender, EventArgs e)
         {
-            PartForm form = new PartForm();
+            PartList form = new PartList();
             form.Show();
         }
     }

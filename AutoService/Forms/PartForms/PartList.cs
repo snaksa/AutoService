@@ -1,4 +1,5 @@
 ﻿using AutoService.Forms;
+using AutoService.Forms.PartForms;
 using AutoService.Models;
 using System;
 using System.Collections.Generic;
@@ -13,26 +14,26 @@ using System.Windows.Forms;
 
 namespace AutoService
 {
-    public partial class CarList : Form
+    public partial class PartList : Form
     {
-        public CarList()
+        public PartList()
         {
             InitializeComponent();
             this.getRecords();
         }
 
-        private void CarAddButton_Click(object sender, EventArgs e)
+        private void PartAddButton_Click(object sender, EventArgs e)
         {
-            CarForm form = new CarForm();
+            PartForm form = new PartForm();
             form.FormClosed += new FormClosedEventHandler(this.OnFormClose);
             form.Show();
         }
 
-        private void editCarButton_Click(object sender, EventArgs e)
+        private void editPartButton_Click(object sender, EventArgs e)
         {
-            int index = carsDataGridView.SelectedCells.Count > 0 ? carsDataGridView.SelectedCells[0].RowIndex : -1;
-            index = index != -1 ? Int32.Parse(carsDataGridView.Rows[index].Cells[0].Value.ToString()) : 0;
-            CarForm form = new CarForm(index);
+            int index = partsDataGridView.SelectedCells.Count > 0 ? partsDataGridView.SelectedCells[0].RowIndex : -1;
+            index = index != -1 ? Int32.Parse(partsDataGridView.Rows[index].Cells[0].Value.ToString()) : 0;
+            PartForm form = new PartForm(index);
             form.FormClosed += new FormClosedEventHandler(this.OnFormClose);
             form.Show();
         }
@@ -48,22 +49,17 @@ namespace AutoService
             {
                 con.Open();
                 using (SqlDataAdapter adapter = new SqlDataAdapter(
-                     "SELECT c.id as ID, c.regNumber as RegNumber, b.name as Brand, m.name as Model, "
-                    + "c.year as Year, c.engineNumber as EngineNumber, c.frameNumber as FrameNumber, col.name as ColorName, c.engineVolume as EngineVolume, "
-                    + "c.description as Description, c.ownerName as OwnerName, c.contactNumber as ContactNumber FROM cars c "
-                    + "LEFT JOIN models m ON m.id = c.modelId "
-                    + "LEFT JOIN brands b ON b.id = m.brandId "
-                    + "LEFT JOIN colors col ON col.id = c.colorId "
+                     "SELECT p.id as ID, p.name as Name, p.number as Number, p.price as Price FROM parts p"
                     , con))
                 {
                     DataTable table = new DataTable();
                     adapter.Fill(table);
-                    carsDataGridView.DataSource = table;
+                    partsDataGridView.DataSource = table;
                 }
             }
         }
 
-        private void CarRmv_Click(object sender, EventArgs e)
+        private void PartRmv_Click(object sender, EventArgs e)
         {
 
         }
