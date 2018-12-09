@@ -1,4 +1,5 @@
 ﻿using AutoService.Forms.EmloyeeForms;
+using AutoService.Forms.MenuForms;
 using AutoService.Forms.PartForms;
 using System;
 using System.Collections.Generic;
@@ -37,9 +38,23 @@ namespace AutoService.Forms
             form.Show();
         }
 
-        private void brandsToolStripMenuItem_Click(object sender, EventArgs e)
+   
+        private void brandToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            MenuBrandForm form = new MenuBrandForm();
+            form.Show();
+        }
 
+        private void modelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MenuModelForm form = new MenuModelForm();
+            form.Show();
+        }
+
+        private void carColorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MenuCarColor form = new MenuCarColor();
+            form.Show();
         }
     }
 }

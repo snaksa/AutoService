@@ -1,4 +1,5 @@
 ﻿using AutoService.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,28 +11,29 @@ using System.Windows.Forms;
 
 namespace AutoService.Forms.MenuForms
 {
-    public partial class BrandForm : Form
+    public partial class CarColorForm : Form
     {
         private int id = 0;
-        public BrandForm(int id = 0)
+        public CarColorForm(int id = 0)
         {
             InitializeComponent();
 
             if (id != 0)
             {
                 this.id = id;
-                Brand brand = BrandRepository.Get(id);
-                brandTextBox.Text = brand.Name;
+                CarColor ccolor = CarColorRepository.Get(id);
+                carcolorTextBox.Text = ccolor.Name;
             }
         }
-        private void BrandAddButton_Click(object sender, System.EventArgs e)
+        private void CarColorAddButton_Click(object sender, System.EventArgs e)
         {
-            string name = brandTextBox.Text;
+            string name = carcolorTextBox.Text;
 
-            if (this.id != 0) BrandRepository.Update(this.id, name);
-            else BrandRepository.Add(name);
+            if (this.id != 0) CarColorRepository.Update(this.id, name);
+            else CarColorRepository.Add(name);
 
             this.Close();
         }
     }
 }
+

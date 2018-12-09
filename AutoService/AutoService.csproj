@@ -96,11 +96,35 @@
     <Compile Include="Forms\MenuForms\BrandForm.Designer.cs">
       <DependentUpon>BrandForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MenuForms\CarColorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MenuForms\CarColorForm.Designer.cs">
+      <DependentUpon>CarColorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MenuForms\MenuBrandForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\MenuForms\MenuBrandForm.Designer.cs">
       <DependentUpon>MenuBrandForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MenuForms\MenuCarColor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MenuForms\MenuCarColor.Designer.cs">
+      <DependentUpon>MenuCarColor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MenuForms\MenuModelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MenuForms\MenuModelForm.Designer.cs">
+      <DependentUpon>MenuModelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MenuForms\ModelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MenuForms\ModelForm.Designer.cs">
+      <DependentUpon>ModelForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\PartForms\PartList.cs">
       <SubType>Form</SubType>
@@ -147,8 +171,20 @@
     <EmbeddedResource Include="Forms\MenuForms\BrandForm.resx">
       <DependentUpon>BrandForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MenuForms\CarColorForm.resx">
+      <DependentUpon>CarColorForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MenuForms\MenuBrandForm.resx">
       <DependentUpon>MenuBrandForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MenuForms\MenuCarColor.resx">
+      <DependentUpon>MenuCarColor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MenuForms\MenuModelForm.resx">
+      <DependentUpon>MenuModelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MenuForms\ModelForm.resx">
+      <DependentUpon>ModelForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PartForms\PartForm.resx">
       <DependentUpon>PartForm.cs</DependentUpon>

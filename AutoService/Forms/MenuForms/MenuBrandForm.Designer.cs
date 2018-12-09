@@ -31,6 +31,8 @@
             this.BrandAdd = new System.Windows.Forms.Button();
             this.BrandEdit = new System.Windows.Forms.Button();
             this.BrandDelete = new System.Windows.Forms.Button();
+            this.brandGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.brandGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // BrandAdd
@@ -41,6 +43,7 @@
             this.BrandAdd.TabIndex = 2;
             this.BrandAdd.Text = "Добавяне на марка";
             this.BrandAdd.UseVisualStyleBackColor = true;
+            this.BrandAdd.Click += new System.EventHandler(this.BrandAdd_Click);
             // 
             // BrandEdit
             // 
@@ -50,6 +53,7 @@
             this.BrandEdit.TabIndex = 3;
             this.BrandEdit.Text = "Редактиране на марка";
             this.BrandEdit.UseVisualStyleBackColor = true;
+            this.BrandEdit.Click += new System.EventHandler(this.BrandEdit_Click);
             // 
             // BrandDelete
             // 
@@ -59,17 +63,28 @@
             this.BrandDelete.TabIndex = 4;
             this.BrandDelete.Text = "Изтриване на марка";
             this.BrandDelete.UseVisualStyleBackColor = true;
+            this.BrandDelete.Click += new System.EventHandler(this.BrandDelete_Click);
+            // 
+            // brandGridView
+            // 
+            this.brandGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.brandGridView.Location = new System.Drawing.Point(12, 121);
+            this.brandGridView.Name = "brandGridView";
+            this.brandGridView.Size = new System.Drawing.Size(240, 150);
+            this.brandGridView.TabIndex = 5;
             // 
             // MenuBrandForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(310, 450);
+            this.ClientSize = new System.Drawing.Size(293, 290);
+            this.Controls.Add(this.brandGridView);
             this.Controls.Add(this.BrandDelete);
             this.Controls.Add(this.BrandEdit);
             this.Controls.Add(this.BrandAdd);
             this.Name = "MenuBrandForm";
             this.Text = "MenuBrandForm";
+            ((System.ComponentModel.ISupportInitialize)(this.brandGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -79,5 +94,6 @@
         private System.Windows.Forms.Button BrandAdd;
         private System.Windows.Forms.Button BrandEdit;
         private System.Windows.Forms.Button BrandDelete;
+        private System.Windows.Forms.DataGridView brandGridView;
     }
 }

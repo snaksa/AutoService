@@ -44,3 +44,9 @@ D:\proekt\AutoService\AutoService\obj\Debug\AutoService.csproj.CoreCompileInputs
 D:\proekt\AutoService\AutoService\obj\Debug\AutoService.exe
 D:\proekt\AutoService\AutoService\obj\Debug\AutoService.pdb
 D:\proekt\AutoService\AutoService\obj\Debug\AutoService.PartList.resources
+D:\proekt\AutoService\AutoService\obj\Debug\AutoService.Forms.MenuForms.BrandForm.resources
+D:\proekt\AutoService\AutoService\obj\Debug\AutoService.Forms.MenuBrandForm.resources
+D:\proekt\AutoService\AutoService\obj\Debug\AutoService.Forms.MenuForms.MenuModelForm.resources
+D:\proekt\AutoService\AutoService\obj\Debug\AutoService.Forms.MenuForms.ModelForm.resources
+D:\proekt\AutoService\AutoService\obj\Debug\AutoService.Forms.MenuForms.CarColorForm.resources
+D:\proekt\AutoService\AutoService\obj\Debug\AutoService.Forms.MenuForms.MenuCarColor.resources

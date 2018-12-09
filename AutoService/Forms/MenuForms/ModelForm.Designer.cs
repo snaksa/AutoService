@@ -1,6 +1,6 @@
 ﻿namespace AutoService.Forms.MenuForms
 {
-    partial class BrandForm
+    partial class ModelForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,47 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.ModelAddButton = new System.Windows.Forms.Button();
             this.label = new System.Windows.Forms.Label();
-            this.brandTextBox = new System.Windows.Forms.TextBox();
-            this.BrandAddButton = new System.Windows.Forms.Button();
+            this.modelTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
+            // 
+            // ModelAddButton
+            // 
+            this.ModelAddButton.Location = new System.Drawing.Point(12, 33);
+            this.ModelAddButton.Name = "ModelAddButton";
+            this.ModelAddButton.Size = new System.Drawing.Size(75, 23);
+            this.ModelAddButton.TabIndex = 7;
+            this.ModelAddButton.Text = "Запази";
+            this.ModelAddButton.UseVisualStyleBackColor = true;
+            this.ModelAddButton.Click += new System.EventHandler(this.ModelAddButton_Click);
             // 
             // label
             // 
             this.label.AutoSize = true;
-            this.label.Location = new System.Drawing.Point(11, 12);
+            this.label.Location = new System.Drawing.Point(11, 7);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(38, 13);
-            this.label.TabIndex = 3;
-            this.label.Text = "Brand:";
+            this.label.Size = new System.Drawing.Size(39, 13);
+            this.label.TabIndex = 6;
+            this.label.Text = "Model:";
             // 
-            // brandTextBox
+            // modelTextBox
             // 
-            this.brandTextBox.Location = new System.Drawing.Point(79, 12);
-            this.brandTextBox.Name = "brandTextBox";
-            this.brandTextBox.Size = new System.Drawing.Size(100, 20);
-            this.brandTextBox.TabIndex = 2;
+            this.modelTextBox.Location = new System.Drawing.Point(79, 7);
+            this.modelTextBox.Name = "modelTextBox";
+            this.modelTextBox.Size = new System.Drawing.Size(100, 20);
+            this.modelTextBox.TabIndex = 5;
             // 
-            // BrandAddButton
-            // 
-            this.BrandAddButton.Location = new System.Drawing.Point(12, 38);
-            this.BrandAddButton.Name = "BrandAddButton";
-            this.BrandAddButton.Size = new System.Drawing.Size(75, 23);
-            this.BrandAddButton.TabIndex = 4;
-            this.BrandAddButton.Text = "Запази";
-            this.BrandAddButton.UseVisualStyleBackColor = true;
-            this.BrandAddButton.Click += new System.EventHandler(this.BrandAddButton_Click);
-            // 
-            // BrandForm
+            // ModelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(300, 80);
-            this.Controls.Add(this.BrandAddButton);
+            this.ClientSize = new System.Drawing.Size(220, 71);
+            this.Controls.Add(this.ModelAddButton);
             this.Controls.Add(this.label);
-            this.Controls.Add(this.brandTextBox);
-            this.Name = "BrandForm";
-            this.Text = "BrandForm";
+            this.Controls.Add(this.modelTextBox);
+            this.Name = "ModelForm";
+            this.Text = "ModelForm";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -76,8 +76,8 @@
 
         #endregion
 
+        private System.Windows.Forms.Button ModelAddButton;
         private System.Windows.Forms.Label label;
-        private System.Windows.Forms.TextBox brandTextBox;
-        private System.Windows.Forms.Button BrandAddButton;
+        private System.Windows.Forms.TextBox modelTextBox;
     }
 }

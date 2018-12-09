@@ -1,4 +1,5 @@
 ﻿using AutoService.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,26 +11,26 @@ using System.Windows.Forms;
 
 namespace AutoService.Forms.MenuForms
 {
-    public partial class BrandForm : Form
+    public partial class ModelForm : Form
     {
         private int id = 0;
-        public BrandForm(int id = 0)
+        public ModelForm(int id = 0)
         {
             InitializeComponent();
 
             if (id != 0)
             {
                 this.id = id;
-                Brand brand = BrandRepository.Get(id);
-                brandTextBox.Text = brand.Name;
+                Model model =  ModelRepository.Get(id);
+                modelTextBox.Text = model.Name;
             }
         }
-        private void BrandAddButton_Click(object sender, System.EventArgs e)
+        private void ModelAddButton_Click(object sender, System.EventArgs e)
         {
-            string name = brandTextBox.Text;
+            string name = modelTextBox.Text;
 
-            if (this.id != 0) BrandRepository.Update(this.id, name);
-            else BrandRepository.Add(name);
+            if (this.id != 0) ModelRepository.Update(this.id, name);
+            else ModelRepository.Add(name);
 
             this.Close();
         }
