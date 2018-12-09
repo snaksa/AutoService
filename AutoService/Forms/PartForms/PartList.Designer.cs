@@ -44,6 +44,7 @@
             this.partEditButton.TabIndex = 7;
             this.partEditButton.Text = "Редакция";
             this.partEditButton.UseVisualStyleBackColor = true;
+            this.partEditButton.Click += new System.EventHandler(this.partEditButton_Click);
             // 
             // partsDataGridView
             // 
@@ -63,6 +64,7 @@
             this.PartRmv.TabIndex = 5;
             this.PartRmv.Text = "Изтриване на автомобил";
             this.PartRmv.UseVisualStyleBackColor = true;
+            this.PartRmv.Click += new System.EventHandler(this.PartRmv_Click);
             // 
             // PartAddButton
             // 

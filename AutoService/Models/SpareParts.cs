@@ -8,7 +8,7 @@ namespace AutoService.Models
 {
     class SpareParts
     {
-        public SpareParts(int id = 0, string name = "", string number = "", double price = 0.0)
+        public SpareParts(int id = 0, string name = "", string number = "", double price = 0)
         {
             this.Id = id;
             this.Name = name;

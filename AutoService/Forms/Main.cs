@@ -36,5 +36,10 @@ namespace AutoService.Forms
             PartList form = new PartList();
             form.Show();
         }
+
+        private void brandsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -90,6 +90,18 @@
     <Compile Include="Forms\Main.designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MenuForms\BrandForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MenuForms\BrandForm.Designer.cs">
+      <DependentUpon>BrandForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MenuForms\MenuBrandForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MenuForms\MenuBrandForm.Designer.cs">
+      <DependentUpon>MenuBrandForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\PartForms\PartList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +143,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MenuForms\BrandForm.resx">
+      <DependentUpon>BrandForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MenuForms\MenuBrandForm.resx">
+      <DependentUpon>MenuBrandForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PartForms\PartForm.resx">
       <DependentUpon>PartForm.cs</DependentUpon>

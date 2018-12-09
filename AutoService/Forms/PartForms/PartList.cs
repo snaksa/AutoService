@@ -59,9 +59,33 @@ namespace AutoService
             }
         }
 
+   
+        private void partEditButton_Click(object sender, EventArgs e)
+        {
+            int index = partsDataGridView.SelectedCells.Count > 0 ? partsDataGridView.SelectedCells[0].RowIndex : -1;
+            index = index != -1 ? Int32.Parse(partsDataGridView.Rows[index].Cells[0].Value.ToString()) : 0;
+            PartForm form = new PartForm(index);
+            form.FormClosed += new FormClosedEventHandler(this.OnFormClose);
+            form.Show();
+        }
+
         private void PartRmv_Click(object sender, EventArgs e)
         {
+            int index = partsDataGridView.SelectedCells.Count > 0 ? partsDataGridView.SelectedCells[0].RowIndex : -1;
+            index = index != -1 ? Int32.Parse(partsDataGridView.Rows[index].Cells[0].Value.ToString()) : 0;
+            if (index == 0)
+            {
+                MessageBox.Show("Please select row!", "No record selected?", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
 
+            DialogResult result = MessageBox.Show("Are you sure you want to delete the record?", "Are you sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                PartRepository.Remove(PartRepository.Get(index));
+                this.getRecords();
+            }
         }
     }
-}
+    }
+
