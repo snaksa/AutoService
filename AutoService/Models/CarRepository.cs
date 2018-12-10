@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -52,6 +53,47 @@ namespace AutoService.Models
             }
 
             return null;
+        }
+
+        public static List<Car> GetAll()
+        {
+            List<Car> models = new List<Car>();
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+                using (SqlCommand command = new SqlCommand(
+                     "SELECT c.id as ID, c.regNumber as regNumber, m.id as modelId, m.name as modelName, "
+                    + "b.id as brandId, b.name as brandName, "
+                    + "c.year as Year, c.engineNumber, c.frameNumber, col.id as colorId, col.name as colorName, "
+                    + "c.engineVolume, c.description, c.ownerName, c.contactNumber "
+                    + "FROM cars c "
+                    + "LEFT JOIN models m ON m.id = c.modelId "
+                    + "LEFT JOIN brands b ON b.id = m.brandId "
+                    + "LEFT JOIN colors col ON col.id = c.colorId", con))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            models.Add(new Car(
+                                reader.GetInt32(0),
+                                reader.GetString(1).Trim(),
+                                new Model(reader.GetInt32(2), reader.GetString(3).Trim(),
+                                new Brand(reader.GetInt32(4), reader.GetString(5).Trim())),
+                                reader.GetInt32(6),
+                                reader.GetString(7).Trim(),
+                                reader.GetString(8).Trim(),
+                                new CarColor(reader.GetInt32(9), reader.GetString(10).Trim()),
+                                reader.GetString(11).Trim(),
+                                reader.GetString(12).Trim(),
+                                reader.GetString(13).Trim(),
+                                reader.GetString(14).Trim()));
+                        }
+                    }
+                }
+            }
+
+            return models;
         }
 
         public static void Add(Car car)

@@ -28,7 +28,7 @@ namespace AutoService.Forms.MenuForms
         {
             string name = brandTextBox.Text;
 
-            if (this.id != 0) BrandRepository.Update(this.id, name);
+            if (this.id != 0) BrandRepository.Update(new Brand(this.id, name));
             else BrandRepository.Add(name);
 
             this.Close();

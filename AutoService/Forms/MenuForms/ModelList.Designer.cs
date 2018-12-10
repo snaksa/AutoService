@@ -1,6 +1,6 @@
 ﻿namespace AutoService.Forms.MenuForms
 {
-    partial class MenuModelForm
+    partial class ModelList
     {
         /// <summary>
         /// Required designer variable.
@@ -38,17 +38,18 @@
             // modelGridView
             // 
             this.modelGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.modelGridView.Enabled = false;
-            this.modelGridView.Location = new System.Drawing.Point(12, 124);
+            this.modelGridView.Location = new System.Drawing.Point(16, 153);
+            this.modelGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.modelGridView.Name = "modelGridView";
-            this.modelGridView.Size = new System.Drawing.Size(240, 150);
+            this.modelGridView.Size = new System.Drawing.Size(320, 185);
             this.modelGridView.TabIndex = 9;
             // 
             // ModelDelete
             // 
-            this.ModelDelete.Location = new System.Drawing.Point(12, 74);
+            this.ModelDelete.Location = new System.Drawing.Point(16, 91);
+            this.ModelDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ModelDelete.Name = "ModelDelete";
-            this.ModelDelete.Size = new System.Drawing.Size(134, 23);
+            this.ModelDelete.Size = new System.Drawing.Size(179, 28);
             this.ModelDelete.TabIndex = 8;
             this.ModelDelete.Text = "Изтриване на модел";
             this.ModelDelete.UseVisualStyleBackColor = true;
@@ -56,9 +57,10 @@
             // 
             // ModelEdit
             // 
-            this.ModelEdit.Location = new System.Drawing.Point(12, 45);
+            this.ModelEdit.Location = new System.Drawing.Point(16, 55);
+            this.ModelEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ModelEdit.Name = "ModelEdit";
-            this.ModelEdit.Size = new System.Drawing.Size(134, 23);
+            this.ModelEdit.Size = new System.Drawing.Size(179, 28);
             this.ModelEdit.TabIndex = 7;
             this.ModelEdit.Text = "Редактиране на модел";
             this.ModelEdit.UseVisualStyleBackColor = true;
@@ -66,24 +68,26 @@
             // 
             // ModelAdd
             // 
-            this.ModelAdd.Location = new System.Drawing.Point(12, 16);
+            this.ModelAdd.Location = new System.Drawing.Point(16, 20);
+            this.ModelAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ModelAdd.Name = "ModelAdd";
-            this.ModelAdd.Size = new System.Drawing.Size(134, 23);
+            this.ModelAdd.Size = new System.Drawing.Size(179, 28);
             this.ModelAdd.TabIndex = 6;
             this.ModelAdd.Text = "Добавяне на модел";
             this.ModelAdd.UseVisualStyleBackColor = true;
             this.ModelAdd.Click += new System.EventHandler(this.ModelAdd_Click);
             // 
-            // MenuModelForm
+            // ModelList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(282, 292);
+            this.ClientSize = new System.Drawing.Size(376, 359);
             this.Controls.Add(this.modelGridView);
             this.Controls.Add(this.ModelDelete);
             this.Controls.Add(this.ModelEdit);
             this.Controls.Add(this.ModelAdd);
-            this.Name = "MenuModelForm";
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "ModelList";
             this.Text = "MenuModelForm";
             ((System.ComponentModel.ISupportInitialize)(this.modelGridView)).EndInit();
             this.ResumeLayout(false);

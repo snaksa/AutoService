@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace AutoService.Forms
 {
-    public partial class MenuBrandForm : Form
+    public partial class BrandList : Form
     {
-        public MenuBrandForm()
+        public BrandList()
         {
             InitializeComponent();
             this.getRecords();

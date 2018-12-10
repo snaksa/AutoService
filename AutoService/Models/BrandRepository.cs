@@ -68,7 +68,7 @@ namespace AutoService.Models
             }
         }
 
-        public static void Update(int id, string name)
+        public static void Update(Brand brand)
         {
             using (SqlConnection con = new SqlConnection(connectionString))
             {
@@ -76,9 +76,9 @@ namespace AutoService.Models
                 using (SqlCommand command = new SqlCommand("UPDATE brands SET name = @name WHERE id = @id", con))
                 {
                     command.Parameters.Add("@id", SqlDbType.Int);
-                    command.Parameters["@id"].Value = id;
+                    command.Parameters["@id"].Value = brand.Id;
                     command.Parameters.Add("@name", SqlDbType.NVarChar);
-                    command.Parameters["@name"].Value = name;
+                    command.Parameters["@name"].Value = brand.Name;
 
                     command.ExecuteNonQuery();
                 }

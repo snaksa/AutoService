@@ -8,6 +8,10 @@ namespace AutoService.Models
 {
     class Car
     {
+        public Car(int id, string number) : this(id, number, null, 0, "", "", null, "", "", "", "")
+        {
+        }
+
         public Car(int id, string registrationNumber,
             Model model, int year, string engineNumber,
             string frameNumber, CarColor color, string engineVolume,
@@ -38,7 +42,7 @@ namespace AutoService.Models
         public string Description { set; get; }
         public string CarOwnerName { set; get; }
         public string ContactNumber { set; get; }
- 
+
 
 
     }

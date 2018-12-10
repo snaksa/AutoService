@@ -1,6 +1,6 @@
 ﻿namespace AutoService.Forms
 {
-    partial class MenuBrandForm
+    partial class BrandList
     {
         /// <summary>
         /// Required designer variable.

@@ -12,10 +12,10 @@ using System.Windows.Forms;
 
 namespace AutoService.Forms.MenuForms
 {
-    public partial class MenuModelForm : Form
+    public partial class ModelList : Form
     {
-        
-public MenuModelForm()
+
+        public ModelList()
         {
             InitializeComponent();
             this.getRecords();
@@ -37,14 +37,11 @@ public MenuModelForm()
             using (SqlConnection con = new SqlConnection(ModelRepository.connectionString))
             {
                 con.Open();
-                using (SqlCommand command = new SqlCommand("SELECT id AS ID, name AS Name FROM models", con))
+                using (SqlDataAdapter adapter = new SqlDataAdapter("SELECT m.id AS ID, m.name AS Name, b.name as Brand FROM models m LEFT JOIN brands b ON m.brandId = b.id", con))
                 {
-                    using (SqlDataAdapter adapter = new SqlDataAdapter("SELECT id AS ID, name AS Name FROM models", con))
-                    {
-                        DataTable table = new DataTable();
-                        adapter.Fill(table);
-                        modelGridView.DataSource = table;
-                    }
+                    DataTable table = new DataTable();
+                    adapter.Fill(table);
+                    modelGridView.DataSource = table;
                 }
             }
         }

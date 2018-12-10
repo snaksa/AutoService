@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace AutoService.Models
@@ -30,6 +31,27 @@ namespace AutoService.Models
             }
 
             return null;
+        }
+
+        public static List<Employee> GetAll()
+        {
+            List<Employee> models = new List<Employee>();
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+                using (SqlCommand command = new SqlCommand("SELECT id as ID, name as Name FROM employees", con))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            models.Add(new Employee(reader.GetInt32(0), reader.GetString(1).Trim()));
+                        }
+                    }
+                }
+            }
+
+            return models;
         }
 
         public static void Add(string name)

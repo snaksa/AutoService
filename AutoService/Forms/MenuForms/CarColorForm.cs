@@ -21,16 +21,16 @@ namespace AutoService.Forms.MenuForms
             if (id != 0)
             {
                 this.id = id;
-                CarColor ccolor = CarColorRepository.Get(id);
-                carcolorTextBox.Text = ccolor.Name;
+                CarColor color = CarColorRepository.Get(id);
+                carcolorTextBox.Text = color.Name;
             }
         }
         private void CarColorAddButton_Click(object sender, System.EventArgs e)
         {
             string name = carcolorTextBox.Text;
 
-            if (this.id != 0) CarColorRepository.Update(this.id, name);
-            else CarColorRepository.Add(name);
+            if (this.id != 0) CarColorRepository.Update(new CarColor(this.id, name));
+            else CarColorRepository.Add(new CarColor(0, name));
 
             this.Close();
         }

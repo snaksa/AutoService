@@ -53,32 +53,28 @@ namespace AutoService.Models
             return colors;
         }
 
-        public static void Add(string name)
+        public static void Add(CarColor c)
         {
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 con.Open();
                 using (SqlCommand command = new SqlCommand("INSERT INTO colors (name) VALUES(@name)", con))
                 {
-                    command.Parameters.Add("@name", SqlDbType.NVarChar);
-                    command.Parameters["@name"].Value = name;
-
+                    command.Parameters.AddWithValue("@name", c.Name);
                     command.ExecuteNonQuery();
                 }
             }
         }
 
-        public static void Update(int id, string name)
+        public static void Update(CarColor c)
         {
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 con.Open();
                 using (SqlCommand command = new SqlCommand("UPDATE colors SET name = @name WHERE id = @id", con))
                 {
-                    command.Parameters.Add("@id", SqlDbType.Int);
-                    command.Parameters["@id"].Value = id;
-                    command.Parameters.Add("@name", SqlDbType.NVarChar);
-                    command.Parameters["@name"].Value = name;
+                    command.Parameters.AddWithValue("@id", c.Id);
+                    command.Parameters.AddWithValue("@name", c.Name);
 
                     command.ExecuteNonQuery();
                 }

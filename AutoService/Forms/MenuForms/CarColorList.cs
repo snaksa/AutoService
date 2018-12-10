@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace AutoService.Forms.MenuForms
 {
-    public partial class MenuCarColor : Form
+    public partial class CarColorList : Form
     {
-        public MenuCarColor()
+        public CarColorList()
         {
             InitializeComponent();
             this.getRecords();
@@ -36,14 +36,11 @@ namespace AutoService.Forms.MenuForms
             using (SqlConnection con = new SqlConnection(CarColorRepository.connectionString))
             {
                 con.Open();
-                using (SqlCommand command = new SqlCommand("SELECT id AS ID, name AS Name FROM colors", con))
+                using (SqlDataAdapter adapter = new SqlDataAdapter("SELECT id AS ID, name AS Name FROM colors", con))
                 {
-                    using (SqlDataAdapter adapter = new SqlDataAdapter("SELECT id AS ID, name AS Name FROM colors", con))
-                    {
-                        DataTable table = new DataTable();
-                        adapter.Fill(table);
-                        carcolorGridView.DataSource = table;
-                    }
+                    DataTable table = new DataTable();
+                    adapter.Fill(table);
+                    carcolorGridView.DataSource = table;
                 }
             }
         }

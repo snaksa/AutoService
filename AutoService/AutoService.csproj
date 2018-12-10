@@ -60,6 +60,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\CardForms\CardList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CardForms\CardList.Designer.cs">
+      <DependentUpon>CardList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CardForms\CardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CardForms\CardForm.designer.cs">
+      <DependentUpon>CardForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CarForms\CarList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,23 +114,23 @@
     <Compile Include="Forms\MenuForms\CarColorForm.Designer.cs">
       <DependentUpon>CarColorForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MenuForms\MenuBrandForm.cs">
+    <Compile Include="Forms\MenuForms\BrandList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MenuForms\MenuBrandForm.Designer.cs">
-      <DependentUpon>MenuBrandForm.cs</DependentUpon>
+    <Compile Include="Forms\MenuForms\BrandList.Designer.cs">
+      <DependentUpon>BrandList.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MenuForms\MenuCarColor.cs">
+    <Compile Include="Forms\MenuForms\CarColorList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MenuForms\MenuCarColor.Designer.cs">
-      <DependentUpon>MenuCarColor.cs</DependentUpon>
+    <Compile Include="Forms\MenuForms\CarColorList.Designer.cs">
+      <DependentUpon>CarColorList.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MenuForms\MenuModelForm.cs">
+    <Compile Include="Forms\MenuForms\ModelList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MenuForms\MenuModelForm.Designer.cs">
-      <DependentUpon>MenuModelForm.cs</DependentUpon>
+    <Compile Include="Forms\MenuForms\ModelList.Designer.cs">
+      <DependentUpon>ModelList.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MenuForms\ModelForm.cs">
       <SubType>Form</SubType>
@@ -147,12 +159,19 @@
     <Compile Include="Models\Car.cs" />
     <Compile Include="Models\Brand.cs" />
     <Compile Include="Models\EmployeeRepository.cs" />
+    <Compile Include="Models\RepairCardRepository.cs" />
     <Compile Include="Models\PartRepository.cs" />
     <Compile Include="Models\RepairCard.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\SpareParts.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\CardForms\CardList.resx">
+      <DependentUpon>CardList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CardForms\CardForm.resx">
+      <DependentUpon>CardForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\CarForms\CarList.resx">
       <DependentUpon>CarList.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,14 +193,14 @@
     <EmbeddedResource Include="Forms\MenuForms\CarColorForm.resx">
       <DependentUpon>CarColorForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MenuForms\MenuBrandForm.resx">
-      <DependentUpon>MenuBrandForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\MenuForms\BrandList.resx">
+      <DependentUpon>BrandList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MenuForms\MenuCarColor.resx">
-      <DependentUpon>MenuCarColor.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\MenuForms\CarColorList.resx">
+      <DependentUpon>CarColorList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MenuForms\MenuModelForm.resx">
-      <DependentUpon>MenuModelForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\MenuForms\ModelList.resx">
+      <DependentUpon>ModelList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MenuForms\ModelForm.resx">
       <DependentUpon>ModelForm.cs</DependentUpon>
@@ -222,6 +241,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

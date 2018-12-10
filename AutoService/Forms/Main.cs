@@ -41,19 +41,25 @@ namespace AutoService.Forms
    
         private void brandToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MenuBrandForm form = new MenuBrandForm();
+            BrandList form = new BrandList();
             form.Show();
         }
 
         private void modelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MenuModelForm form = new MenuModelForm();
+            ModelList form = new ModelList();
             form.Show();
         }
 
         private void carColorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MenuCarColor form = new MenuCarColor();
+            CarColorList form = new CarColorList();
+            form.Show();
+        }
+
+        private void cartsButton_Click(object sender, EventArgs e)
+        {
+            CardList form = new CardList();
             form.Show();
         }
     }

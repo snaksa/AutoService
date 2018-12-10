@@ -34,13 +34,12 @@ namespace AutoService.Forms.PartForms
         }
         private void saveButton_Click(object sender, EventArgs e)
         {
-
             SpareParts p = new SpareParts(this.id, nameTextBox.Text, numberTextBox.Text, Double.Parse(priceTextBox.Text, CultureInfo.InvariantCulture));
 
-                if (p.Id == 0) PartRepository.Add(p);
-                else PartRepository.Update(p);
+            if (p.Id == 0) PartRepository.Add(p);
+            else PartRepository.Update(p);
 
-                this.Close();
-            }
+            this.Close();
+        }
     }
 }
