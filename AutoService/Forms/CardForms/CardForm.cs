@@ -45,6 +45,7 @@ namespace AutoService.Forms
                 dateInDatetime.Value = card.In;
                 dateOutDatetime.Value = card.Out;
                 descriptionTextbox.Text = card.Description;
+                numberTextbox.Text = card.Number;
                 carDropdown.Text = card.Car.RegistrationNumber;
                 employeeDropdown.Text = card.Employee.Name;
             }
