@@ -61,9 +61,6 @@ D:\proekt\AutoService\AutoService\AutoService\obj\Debug\AutoService.Forms.Emloye
 D:\proekt\AutoService\AutoService\AutoService\obj\Debug\AutoService.Forms.Main.resources
 D:\proekt\AutoService\AutoService\AutoService\obj\Debug\AutoService.Forms.MenuForms.BrandForm.resources
 D:\proekt\AutoService\AutoService\AutoService\obj\Debug\AutoService.Forms.MenuForms.CarColorForm.resources
-D:\proekt\AutoService\AutoService\AutoService\obj\Debug\AutoService.Forms.MenuBrandForm.resources
-D:\proekt\AutoService\AutoService\AutoService\obj\Debug\AutoService.Forms.MenuForms.MenuCarColor.resources
-D:\proekt\AutoService\AutoService\AutoService\obj\Debug\AutoService.Forms.MenuForms.MenuModelForm.resources
 D:\proekt\AutoService\AutoService\AutoService\obj\Debug\AutoService.Forms.MenuForms.ModelForm.resources
 D:\proekt\AutoService\AutoService\AutoService\obj\Debug\AutoService.Forms.PartForms.PartForm.resources
 D:\proekt\AutoService\AutoService\AutoService\obj\Debug\AutoService.PartList.resources
@@ -72,3 +69,8 @@ D:\proekt\AutoService\AutoService\AutoService\obj\Debug\AutoService.csproj.Gener
 D:\proekt\AutoService\AutoService\AutoService\obj\Debug\AutoService.csproj.CoreCompileInputs.cache
 D:\proekt\AutoService\AutoService\AutoService\obj\Debug\AutoService.exe
 D:\proekt\AutoService\AutoService\AutoService\obj\Debug\AutoService.pdb
+D:\proekt\AutoService\AutoService\AutoService\obj\Debug\AutoService.Forms.CardList.resources
+D:\proekt\AutoService\AutoService\AutoService\obj\Debug\AutoService.Forms.CardForm.resources
+D:\proekt\AutoService\AutoService\AutoService\obj\Debug\AutoService.Forms.BrandList.resources
+D:\proekt\AutoService\AutoService\AutoService\obj\Debug\AutoService.Forms.MenuForms.CarColorList.resources
+D:\proekt\AutoService\AutoService\AutoService\obj\Debug\AutoService.Forms.MenuForms.ModelList.resources

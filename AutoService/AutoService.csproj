@@ -268,5 +268,11 @@
   <ItemGroup>
     <None Include="Resources\repair.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carFormBackGround.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\48364228_267573177259903_5433165283348971520_n.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

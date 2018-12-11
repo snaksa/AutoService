@@ -63,6 +63,16 @@ namespace AutoService.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _48364228_267573177259903_5433165283348971520_n {
+            get {
+                object obj = ResourceManager.GetObject("48364228_267573177259903_5433165283348971520_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap aerosol {
             get {
                 object obj = ResourceManager.GetObject("aerosol", resourceCulture);
@@ -106,6 +116,16 @@ namespace AutoService.Properties {
         internal static System.Drawing.Bitmap car_door {
             get {
                 object obj = ResourceManager.GetObject("car-door", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap carFormBackGround {
+            get {
+                object obj = ResourceManager.GetObject("carFormBackGround", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
