@@ -147,5 +147,20 @@ namespace AutoService.Models
                 }
             }
         }
+
+        public static void Remove(int id)
+        {
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+                using (SqlCommand command = new SqlCommand("DELETE FROM cars WHERE id = @id", con))
+                {
+                    command.Parameters.Add("@id", SqlDbType.Int);
+                    command.Parameters["@id"].Value = id;
+
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
     }
 }

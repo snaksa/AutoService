@@ -36,12 +36,12 @@ namespace AutoService.Models
                         {
                             return new RepairCard(
                                 reader.GetInt32(0),
-                                reader.GetString(1),
+                                reader.GetString(1).Trim(),
                                 reader.GetDateTime(2),
-                                reader.GetDateTime(3),
-                                new Car(reader.GetInt32(4), reader.GetString(5)),
-                                reader.GetString(6),
-                                new Employee(reader.GetInt32(7), reader.GetString(8)));
+                                reader.IsDBNull(3) ? null : (DateTime?)reader.GetDateTime(3),
+                                new Car(reader.GetInt32(4), reader.GetString(5).Trim()),
+                                reader.GetString(6).Trim(),
+                                new Employee(reader.GetInt32(7), reader.GetString(8).Trim()));
                         }
                     }
                 }
@@ -55,13 +55,14 @@ namespace AutoService.Models
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 con.Open();
-                using (SqlCommand command = new SqlCommand("INSERT INTO cards (dateIn, dateOut, carId, employeeId, description) VALUES(@dateIn, @dateOut, @carId, @employeeId, @description)", con))
+                using (SqlCommand command = new SqlCommand("INSERT INTO cards (dateIn, dateOut, carId, employeeId, description, number) VALUES(@dateIn, @dateOut, @carId, @employeeId, @description, @number)", con))
                 {
                     command.Parameters.AddWithValue("@dateIn", card.In);
-                    command.Parameters.AddWithValue("@dateOut", card.Out);
+                    command.Parameters.AddWithValue("@dateOut", card.Out != null ? card.Out : (object)DBNull.Value);
                     command.Parameters.AddWithValue("@carId", card.Car.Id);
                     command.Parameters.AddWithValue("@employeeId", card.Employee.Id);
                     command.Parameters.AddWithValue("@description", card.Description);
+                    command.Parameters.AddWithValue("@number", card.Number);
                     command.ExecuteNonQuery();
                 }
             }
@@ -73,16 +74,17 @@ namespace AutoService.Models
             {
                 con.Open();
                 using (SqlCommand command = new SqlCommand(
-                    "UPDATE parts SET dateIn = @dateIn, dateOut = @dateOut, carId = @carId, " +
-                    "employeeId = @employeeId, description = @description " +
+                    "UPDATE cards SET dateIn = @dateIn, dateOut = @dateOut, carId = @carId, " +
+                    "employeeId = @employeeId, description = @description, number = @number " +
                     "WHERE id = @id", con))
                 {
                     command.Parameters.AddWithValue("@id", card.Id);
                     command.Parameters.AddWithValue("@dateIn", card.In);
-                    command.Parameters.AddWithValue("@dateOut", card.Out);
+                    command.Parameters.AddWithValue("@dateOut", card.Out != null ? card.Out : (object)DBNull.Value);
                     command.Parameters.AddWithValue("@carId", card.Car.Id);
                     command.Parameters.AddWithValue("@employeeId", card.Employee.Id);
                     command.Parameters.AddWithValue("@description", card.Description);
+                    command.Parameters.AddWithValue("@number", card.Number);
                     command.ExecuteNonQuery();
                 }
             }
@@ -96,6 +98,55 @@ namespace AutoService.Models
                 using (SqlCommand command = new SqlCommand("DELETE FROM cards WHERE id = @id", con))
                 {
                     command.Parameters.AddWithValue("@id", card.Id);
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public static void AddPart(int id, SpareParts part)
+        {
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+                using (SqlCommand command = new SqlCommand("INSERT INTO card_parts (cardId, partId) VALUES(@cardId, @partId)", con))
+                {
+                    command.Parameters.AddWithValue("@cardId", id);
+                    command.Parameters.AddWithValue("@partId", part.Id);
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public static void RemovePart(int id)
+        {
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+                using (SqlCommand command = new SqlCommand("DELETE FROM card_parts WHERE id = @id", con))
+                {
+                    command.Parameters.AddWithValue("@id", id);
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public static void RemoveByCar(int id)
+        {
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+                using (SqlCommand command = new SqlCommand("DELETE p FROM card_parts p " +
+                    "LEFT JOIN cards card ON p.cardId = card.id " +
+                    "WHERE card.carId = @id", con))
+                {
+                    command.Parameters.AddWithValue("@id", id);
+                    command.ExecuteNonQuery();
+                }
+
+                using (SqlCommand command = new SqlCommand("DELETE FROM cards " +
+                    "WHERE carId = @id", con))
+                {
+                    command.Parameters.AddWithValue("@id", id);
                     command.ExecuteNonQuery();
                 }
             }

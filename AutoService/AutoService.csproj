@@ -72,6 +72,12 @@
     <Compile Include="Forms\CardForms\CardForm.designer.cs">
       <DependentUpon>CardForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CardForms\SelectPartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CardForms\SelectPartForm.designer.cs">
+      <DependentUpon>SelectPartForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CarForms\CarList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CardForms\CardForm.resx">
       <DependentUpon>CardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CardForms\SelectPartForm.resx">
+      <DependentUpon>SelectPartForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CarForms\CarList.resx">
       <DependentUpon>CarList.cs</DependentUpon>

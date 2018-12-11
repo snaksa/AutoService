@@ -12,7 +12,7 @@ using System.Globalization;
 using Autoservice.Models;
 using System.Data.SqlClient;
 
-namespace AutoService.Forms
+namespace AutoService.Forms.CardForms
 {
     public partial class CardForm : Form
     {
@@ -33,17 +33,24 @@ namespace AutoService.Forms
             foreach (Employee e in employees)
                 employeeDropdown.Items.Add(e.Name);
 
-            this.getParts(id);
             if (id != 0)
             {
                 this.id = id;
                 card = RepairCardRepository.Get(id);
             }
 
+
+            dateOutDatetime.CustomFormat = " ";
+            dateOutDatetime.Format = DateTimePickerFormat.Custom;
+
             if (card != null)
             {
+                this.getParts();
                 dateInDatetime.Value = card.In;
-                dateOutDatetime.Value = card.Out;
+                if (card.Out != null)
+                {
+                    dateOutDatetime.Value = (DateTime)card.Out;
+                }
                 descriptionTextbox.Text = card.Description;
                 numberTextbox.Text = card.Number;
                 carDropdown.Text = card.Car.RegistrationNumber;
@@ -53,13 +60,21 @@ namespace AutoService.Forms
             {
                 carDropdown.Text = this.cars.Count > 0 ? this.cars[0].RegistrationNumber : "";
                 employeeDropdown.Text = this.employees.Count > 0 ? this.employees[0].Name : "";
+                partsGridView.Visible = false;
+                addPartButton.Visible = false;
+                removePartButton.Visible = false;
             }
         }
         private void saveButton_Click(object sender, EventArgs e)
         {
-            RepairCard p = new RepairCard(this.id, numberTextbox.Text, 
-                dateInDatetime.Value, dateOutDatetime.Value, 
-                this.cars[carDropdown.SelectedIndex], descriptionTextbox.Text, 
+            DateTime? dateOut = null;
+            if (dateOutDatetime.Format != DateTimePickerFormat.Custom)
+            {
+                dateOut = dateOutDatetime.Value;
+            }
+            RepairCard p = new RepairCard(this.id, numberTextbox.Text,
+                dateInDatetime.Value, dateOut,
+                this.cars[carDropdown.SelectedIndex], descriptionTextbox.Text,
                 this.employees[employeeDropdown.SelectedIndex]);
 
             if (p.Id == 0) RepairCardRepository.Add(p);
@@ -68,19 +83,19 @@ namespace AutoService.Forms
             this.Close();
         }
 
-        private void getParts(int id)
+        private void getParts()
         {
             using (SqlConnection con = new SqlConnection(CarRepository.connectionString))
             {
                 con.Open();
                 using (SqlDataAdapter adapter = new SqlDataAdapter(
-                    "SELECT id as ID, name as Name, number as Number, price as Price " +
+                    "SELECT p.id as ID, part.name as Name, part.number as Number, part.price as Price " +
                     "FROM card_parts p " +
                     "LEFT JOIN parts part ON part.id = p.partId " +
                     "WHERE p.cardId = @id", con))
                 {
                     adapter.SelectCommand.Parameters.Add("@id", SqlDbType.Int);
-                    adapter.SelectCommand.Parameters["@id"].Value = id;
+                    adapter.SelectCommand.Parameters["@id"].Value = this.id;
                     DataTable table = new DataTable();
                     adapter.Fill(table);
                     partsGridView.DataSource = table;
@@ -90,7 +105,31 @@ namespace AutoService.Forms
 
         private void addPartButton_Click(object sender, EventArgs e)
         {
+            SelectPartForm form = new SelectPartForm(this.id);
+            form.FormClosed += new FormClosedEventHandler(this.OnFormClose);
+            form.Show();
+        }
 
+        private void OnFormClose(object sender, FormClosedEventArgs e)
+        {
+            this.getParts();
+        }
+
+        private void removePartButton_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure?", "Are you sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                int index = partsGridView.SelectedCells.Count > 0 ? partsGridView.SelectedCells[0].RowIndex : -1;
+                index = index != -1 ? Int32.Parse(partsGridView.Rows[index].Cells[0].Value.ToString()) : 0;
+                RepairCardRepository.RemovePart(index);
+                this.getParts();
+            }
+        }
+
+        private void dateOutDatetime_ValueChanged(object sender, EventArgs e)
+        {
+            dateOutDatetime.Format = DateTimePickerFormat.Long;
         }
     }
 }

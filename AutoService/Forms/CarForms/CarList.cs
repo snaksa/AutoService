@@ -65,7 +65,15 @@ namespace AutoService
 
         private void CarRmv_Click(object sender, EventArgs e)
         {
-
+            DialogResult result = MessageBox.Show("Are you sure?", "Are you sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                int index = carsDataGridView.SelectedCells.Count > 0 ? carsDataGridView.SelectedCells[0].RowIndex : -1;
+                index = index != -1 ? Int32.Parse(carsDataGridView.Rows[index].Cells[0].Value.ToString()) : 0;
+                RepairCardRepository.RemoveByCar(index);
+                CarRepository.Remove(index);
+                this.getRecords();
+            }
         }
     }
 }

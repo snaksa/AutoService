@@ -1,4 +1,4 @@
-﻿namespace AutoService.Forms
+﻿namespace AutoService.Forms.CardForms
 {
     partial class CardList
     {

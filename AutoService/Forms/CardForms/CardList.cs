@@ -12,7 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AutoService.Forms
+namespace AutoService.Forms.CardForms
 {
     public partial class CardList : Form
     {
@@ -33,12 +33,16 @@ namespace AutoService.Forms
             {
                 con.Open();
                 using (SqlDataAdapter adapter = new SqlDataAdapter(
-                     "SELECT c.id as ID, e.name as EmloyeeName, c.dateIn as DateIn, c.dateOut as DateOut, " +
-                     "car.regNumber as CarRegNumber, car.ownerName as OwnerName " +
+                     "SELECT c.id as ID, c.number as Number, e.name as EmloyeeName, c.dateIn as DateIn, c.dateOut as DateOut, " +
+                     "car.regNumber as CarRegNumber, car.ownerName as OwnerName, TotalPrice " +
                      "FROM cards c " +
                      "LEFT JOIN employees e ON c.employeeId = e.id " +
-                     "LEFT JOIN cars car ON c.carId = car.id"
-                    , con))
+                     "LEFT JOIN cars car ON c.carId = car.id " +
+                     "LEFT JOIN(" +
+                     "SELECT cp.cardId as cId, SUM(part.price) as TotalPrice " +
+                     "FROM card_parts cp " +
+                     "LEFT JOIN parts part ON part.id = cp.partId " +
+                     "GROUP BY cp.cardId) s ON cId = c.id", con))
                 {
                     DataTable table = new DataTable();
                     adapter.Fill(table);

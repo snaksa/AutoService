@@ -1,4 +1,5 @@
-﻿using AutoService.Forms.EmloyeeForms;
+﻿using AutoService.Forms.CardForms;
+using AutoService.Forms.EmloyeeForms;
 using AutoService.Forms.MenuForms;
 using AutoService.Forms.PartForms;
 using System;

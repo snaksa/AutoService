@@ -9,7 +9,7 @@ namespace Autoservice.Models
 {
     class RepairCard
     {
-        public RepairCard(int id, string number, DateTime dateIn, DateTime dateOut, Car car, string description, Employee employee)
+        public RepairCard(int id, string number, DateTime dateIn, DateTime? dateOut, Car car, string description, Employee employee)
         {
             this.Id = id;
             this.Number = number;
@@ -23,7 +23,7 @@ namespace Autoservice.Models
         public int Id { get; set; }
         public string Number { get; set; }
         public DateTime In { get; set; }
-        public DateTime Out { get; set; }
+        public DateTime? Out { get; set; }
         public Car Car { get; set; }
         public string Description { get; set; }
         public Employee Employee { get; set; }

@@ -1,4 +1,4 @@
-﻿namespace AutoService.Forms
+﻿namespace AutoService.Forms.CardForms
 {
     partial class CardForm
     {
@@ -131,6 +131,7 @@
             this.dateOutDatetime.Name = "dateOutDatetime";
             this.dateOutDatetime.Size = new System.Drawing.Size(200, 22);
             this.dateOutDatetime.TabIndex = 11;
+            this.dateOutDatetime.ValueChanged += new System.EventHandler(this.dateOutDatetime_ValueChanged);
             // 
             // carDropdown
             // 
@@ -220,6 +221,7 @@
             this.removePartButton.TabIndex = 21;
             this.removePartButton.Text = "Remove part";
             this.removePartButton.UseVisualStyleBackColor = true;
+            this.removePartButton.Click += new System.EventHandler(this.removePartButton_Click);
             // 
             // CardForm
             // 
