@@ -26,7 +26,7 @@ namespace AutoService.Models
                     {
                         while (reader.Read())
                         {
-                            return new SpareParts(reader.GetInt32(0), reader.GetString(1).Trim(),reader.GetString(2).Trim(), double.Parse(reader.GetString(3), CultureInfo.InvariantCulture));
+                            return new SpareParts(reader.GetInt32(0), reader.GetString(1).Trim(),reader.GetString(2).Trim(), reader.GetDouble(3));
                         }
                     }
                 }
@@ -125,6 +125,23 @@ namespace AutoService.Models
                     command.Parameters["@id"].Value = part.Id;
 
                     command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public static bool IsUsed(int id)
+        {
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+                using (SqlCommand command = new SqlCommand(
+                    "SELECT COUNT(*) FROM card_parts p " +
+                    "WHERE p.partId = @id", con))
+                {
+                    command.Parameters.Add("@id", SqlDbType.Int);
+                    command.Parameters["@id"].Value = id;
+                    int result = (int)command.ExecuteScalar();
+                    return result > 0;
                 }
             }
         }

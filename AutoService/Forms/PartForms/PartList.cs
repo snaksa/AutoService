@@ -82,8 +82,15 @@ namespace AutoService
             DialogResult result = MessageBox.Show("Are you sure you want to delete the record?", "Are you sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                PartRepository.Remove(PartRepository.Get(index));
-                this.getRecords();
+                if (PartRepository.IsUsed(index))
+                {
+                    MessageBox.Show("Row is used in repair card!", "Row used!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    PartRepository.Remove(PartRepository.Get(index));
+                    this.getRecords();
+                }
             }
         }
     }
