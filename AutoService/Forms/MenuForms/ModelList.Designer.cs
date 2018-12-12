@@ -40,21 +40,23 @@
             // 
             this.modelGridView.AllowUserToAddRows = false;
             this.modelGridView.AllowUserToDeleteRows = false;
-            this.modelGridView.BackgroundColor = System.Drawing.Color.Bisque;
+            this.modelGridView.BackgroundColor = System.Drawing.Color.White;
             this.modelGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.modelGridView.Location = new System.Drawing.Point(12, 103);
+            this.modelGridView.Location = new System.Drawing.Point(16, 127);
+            this.modelGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.modelGridView.MultiSelect = false;
             this.modelGridView.Name = "modelGridView";
             this.modelGridView.ReadOnly = true;
             this.modelGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.modelGridView.Size = new System.Drawing.Size(343, 177);
+            this.modelGridView.Size = new System.Drawing.Size(457, 218);
             this.modelGridView.TabIndex = 9;
             // 
             // ModelDelete
             // 
-            this.ModelDelete.Location = new System.Drawing.Point(12, 74);
+            this.ModelDelete.Location = new System.Drawing.Point(16, 91);
+            this.ModelDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ModelDelete.Name = "ModelDelete";
-            this.ModelDelete.Size = new System.Drawing.Size(134, 23);
+            this.ModelDelete.Size = new System.Drawing.Size(179, 28);
             this.ModelDelete.TabIndex = 8;
             this.ModelDelete.Text = "Изтриване на модел";
             this.ModelDelete.UseVisualStyleBackColor = true;
@@ -62,9 +64,10 @@
             // 
             // ModelEdit
             // 
-            this.ModelEdit.Location = new System.Drawing.Point(12, 45);
+            this.ModelEdit.Location = new System.Drawing.Point(16, 55);
+            this.ModelEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ModelEdit.Name = "ModelEdit";
-            this.ModelEdit.Size = new System.Drawing.Size(134, 23);
+            this.ModelEdit.Size = new System.Drawing.Size(179, 28);
             this.ModelEdit.TabIndex = 7;
             this.ModelEdit.Text = "Редактиране на модел";
             this.ModelEdit.UseVisualStyleBackColor = true;
@@ -72,9 +75,10 @@
             // 
             // ModelAdd
             // 
-            this.ModelAdd.Location = new System.Drawing.Point(12, 16);
+            this.ModelAdd.Location = new System.Drawing.Point(16, 20);
+            this.ModelAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ModelAdd.Name = "ModelAdd";
-            this.ModelAdd.Size = new System.Drawing.Size(134, 23);
+            this.ModelAdd.Size = new System.Drawing.Size(179, 28);
             this.ModelAdd.TabIndex = 6;
             this.ModelAdd.Text = "Добавяне на модел";
             this.ModelAdd.UseVisualStyleBackColor = true;
@@ -82,15 +86,16 @@
             // 
             // ModelList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Bisque;
-            this.ClientSize = new System.Drawing.Size(366, 292);
+            this.BackColor = System.Drawing.Color.Silver;
+            this.ClientSize = new System.Drawing.Size(488, 359);
             this.Controls.Add(this.modelGridView);
             this.Controls.Add(this.ModelDelete);
             this.Controls.Add(this.ModelEdit);
             this.Controls.Add(this.ModelAdd);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ModelList";
             this.Text = "Модел";
             ((System.ComponentModel.ISupportInitialize)(this.modelGridView)).EndInit();

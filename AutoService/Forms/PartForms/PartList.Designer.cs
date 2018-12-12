@@ -38,10 +38,10 @@
             // 
             // partEditButton
             // 
-            this.partEditButton.Location = new System.Drawing.Point(385, 12);
-            this.partEditButton.Margin = new System.Windows.Forms.Padding(2);
+            this.partEditButton.Location = new System.Drawing.Point(513, 15);
+            this.partEditButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.partEditButton.Name = "partEditButton";
-            this.partEditButton.Size = new System.Drawing.Size(70, 23);
+            this.partEditButton.Size = new System.Drawing.Size(93, 28);
             this.partEditButton.TabIndex = 7;
             this.partEditButton.Text = "Редакция";
             this.partEditButton.UseVisualStyleBackColor = true;
@@ -51,24 +51,25 @@
             // 
             this.partsDataGridView.AllowUserToAddRows = false;
             this.partsDataGridView.AllowUserToDeleteRows = false;
-            this.partsDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
+            this.partsDataGridView.BackgroundColor = System.Drawing.Color.White;
             this.partsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.partsDataGridView.GridColor = System.Drawing.SystemColors.ActiveBorder;
-            this.partsDataGridView.Location = new System.Drawing.Point(11, 44);
-            this.partsDataGridView.Margin = new System.Windows.Forms.Padding(2);
+            this.partsDataGridView.Location = new System.Drawing.Point(15, 54);
+            this.partsDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.partsDataGridView.MultiSelect = false;
             this.partsDataGridView.Name = "partsDataGridView";
             this.partsDataGridView.ReadOnly = true;
             this.partsDataGridView.RowTemplate.Height = 24;
             this.partsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.partsDataGridView.Size = new System.Drawing.Size(444, 291);
+            this.partsDataGridView.Size = new System.Drawing.Size(592, 358);
             this.partsDataGridView.TabIndex = 6;
             // 
             // PartRmv
             // 
-            this.PartRmv.Location = new System.Drawing.Point(222, 12);
+            this.PartRmv.Location = new System.Drawing.Point(296, 15);
+            this.PartRmv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PartRmv.Name = "PartRmv";
-            this.PartRmv.Size = new System.Drawing.Size(143, 23);
+            this.PartRmv.Size = new System.Drawing.Size(191, 28);
             this.PartRmv.TabIndex = 5;
             this.PartRmv.Text = "Изтриване на автомобил";
             this.PartRmv.UseVisualStyleBackColor = true;
@@ -76,9 +77,10 @@
             // 
             // PartAddButton
             // 
-            this.PartAddButton.Location = new System.Drawing.Point(11, 12);
+            this.PartAddButton.Location = new System.Drawing.Point(15, 15);
+            this.PartAddButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PartAddButton.Name = "PartAddButton";
-            this.PartAddButton.Size = new System.Drawing.Size(205, 23);
+            this.PartAddButton.Size = new System.Drawing.Size(273, 28);
             this.PartAddButton.TabIndex = 4;
             this.PartAddButton.Text = "Добавяне на резервна част";
             this.PartAddButton.UseVisualStyleBackColor = true;
@@ -86,15 +88,16 @@
             // 
             // PartList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(470, 345);
+            this.ClientSize = new System.Drawing.Size(627, 425);
             this.Controls.Add(this.partEditButton);
             this.Controls.Add(this.partsDataGridView);
             this.Controls.Add(this.PartRmv);
             this.Controls.Add(this.PartAddButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "PartList";
             this.Text = "Parts";
             ((System.ComponentModel.ISupportInitialize)(this.partsDataGridView)).EndInit();

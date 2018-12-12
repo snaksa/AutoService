@@ -40,9 +40,10 @@
             // 
             // CarColorAddButton
             // 
-            this.CarColorAddButton.Location = new System.Drawing.Point(53, 46);
+            this.CarColorAddButton.Location = new System.Drawing.Point(71, 57);
+            this.CarColorAddButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CarColorAddButton.Name = "CarColorAddButton";
-            this.CarColorAddButton.Size = new System.Drawing.Size(75, 23);
+            this.CarColorAddButton.Size = new System.Drawing.Size(100, 28);
             this.CarColorAddButton.TabIndex = 10;
             this.CarColorAddButton.Text = "Запази";
             this.CarColorAddButton.UseVisualStyleBackColor = true;
@@ -51,25 +52,28 @@
             // label
             // 
             this.label.AutoSize = true;
-            this.label.Location = new System.Drawing.Point(12, 16);
+            this.label.Location = new System.Drawing.Point(16, 20);
+            this.label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(35, 13);
+            this.label.Size = new System.Drawing.Size(45, 17);
             this.label.TabIndex = 9;
             this.label.Text = "Цвят:";
             // 
             // carcolorTextBox
             // 
-            this.carcolorTextBox.Location = new System.Drawing.Point(53, 16);
+            this.carcolorTextBox.Location = new System.Drawing.Point(71, 20);
+            this.carcolorTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.carcolorTextBox.Name = "carcolorTextBox";
-            this.carcolorTextBox.Size = new System.Drawing.Size(100, 20);
+            this.carcolorTextBox.Size = new System.Drawing.Size(132, 22);
             this.carcolorTextBox.TabIndex = 8;
             // 
             // namePictureBox
             // 
             this.namePictureBox.Image = global::AutoService.Properties.Resources.repair;
-            this.namePictureBox.Location = new System.Drawing.Point(160, 16);
+            this.namePictureBox.Location = new System.Drawing.Point(213, 20);
+            this.namePictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.namePictureBox.Name = "namePictureBox";
-            this.namePictureBox.Size = new System.Drawing.Size(28, 20);
+            this.namePictureBox.Size = new System.Drawing.Size(37, 25);
             this.namePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.namePictureBox.TabIndex = 11;
             this.namePictureBox.TabStop = false;
@@ -77,15 +81,16 @@
             // 
             // CarColorForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.PaleGreen;
-            this.ClientSize = new System.Drawing.Size(200, 81);
+            this.BackColor = System.Drawing.Color.Silver;
+            this.ClientSize = new System.Drawing.Size(267, 100);
             this.Controls.Add(this.namePictureBox);
             this.Controls.Add(this.CarColorAddButton);
             this.Controls.Add(this.label);
             this.Controls.Add(this.carcolorTextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "CarColorForm";
             this.Text = "Цвят:";
             ((System.ComponentModel.ISupportInitialize)(this.namePictureBox)).EndInit();

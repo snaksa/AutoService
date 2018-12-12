@@ -41,25 +41,29 @@
             // label
             // 
             this.label.AutoSize = true;
-            this.label.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label.Location = new System.Drawing.Point(26, 12);
+            this.label.BackColor = System.Drawing.Color.Silver;
+            this.label.ForeColor = System.Drawing.Color.Black;
+            this.label.Location = new System.Drawing.Point(35, 15);
+            this.label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(43, 13);
+            this.label.Size = new System.Drawing.Size(54, 17);
             this.label.TabIndex = 3;
             this.label.Text = "Марка:";
             // 
             // brandTextBox
             // 
-            this.brandTextBox.Location = new System.Drawing.Point(79, 12);
+            this.brandTextBox.Location = new System.Drawing.Point(105, 15);
+            this.brandTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.brandTextBox.Name = "brandTextBox";
-            this.brandTextBox.Size = new System.Drawing.Size(100, 20);
+            this.brandTextBox.Size = new System.Drawing.Size(132, 22);
             this.brandTextBox.TabIndex = 2;
             // 
             // BrandAddButton
             // 
-            this.BrandAddButton.Location = new System.Drawing.Point(53, 45);
+            this.BrandAddButton.Location = new System.Drawing.Point(71, 55);
+            this.BrandAddButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BrandAddButton.Name = "BrandAddButton";
-            this.BrandAddButton.Size = new System.Drawing.Size(75, 23);
+            this.BrandAddButton.Size = new System.Drawing.Size(100, 28);
             this.BrandAddButton.TabIndex = 4;
             this.BrandAddButton.Text = "Запази";
             this.BrandAddButton.UseVisualStyleBackColor = true;
@@ -68,9 +72,10 @@
             // namePictureBox
             // 
             this.namePictureBox.Image = global::AutoService.Properties.Resources.repair;
-            this.namePictureBox.Location = new System.Drawing.Point(185, 13);
+            this.namePictureBox.Location = new System.Drawing.Point(247, 16);
+            this.namePictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.namePictureBox.Name = "namePictureBox";
-            this.namePictureBox.Size = new System.Drawing.Size(23, 19);
+            this.namePictureBox.Size = new System.Drawing.Size(31, 23);
             this.namePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.namePictureBox.TabIndex = 5;
             this.namePictureBox.TabStop = false;
@@ -78,15 +83,16 @@
             // 
             // BrandForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Maroon;
-            this.ClientSize = new System.Drawing.Size(220, 80);
+            this.BackColor = System.Drawing.Color.Silver;
+            this.ClientSize = new System.Drawing.Size(293, 98);
             this.Controls.Add(this.namePictureBox);
             this.Controls.Add(this.BrandAddButton);
             this.Controls.Add(this.label);
             this.Controls.Add(this.brandTextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "BrandForm";
             this.Text = "Марка";
             ((System.ComponentModel.ISupportInitialize)(this.namePictureBox)).EndInit();

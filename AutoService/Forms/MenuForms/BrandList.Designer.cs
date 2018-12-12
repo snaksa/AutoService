@@ -38,9 +38,10 @@
             // 
             // BrandAdd
             // 
-            this.BrandAdd.Location = new System.Drawing.Point(12, 13);
+            this.BrandAdd.Location = new System.Drawing.Point(16, 16);
+            this.BrandAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BrandAdd.Name = "BrandAdd";
-            this.BrandAdd.Size = new System.Drawing.Size(134, 23);
+            this.BrandAdd.Size = new System.Drawing.Size(179, 28);
             this.BrandAdd.TabIndex = 2;
             this.BrandAdd.Text = "Добавяне на марка";
             this.BrandAdd.UseVisualStyleBackColor = true;
@@ -48,9 +49,10 @@
             // 
             // BrandEdit
             // 
-            this.BrandEdit.Location = new System.Drawing.Point(12, 42);
+            this.BrandEdit.Location = new System.Drawing.Point(16, 52);
+            this.BrandEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BrandEdit.Name = "BrandEdit";
-            this.BrandEdit.Size = new System.Drawing.Size(134, 23);
+            this.BrandEdit.Size = new System.Drawing.Size(179, 28);
             this.BrandEdit.TabIndex = 3;
             this.BrandEdit.Text = "Редактиране на марка";
             this.BrandEdit.UseVisualStyleBackColor = true;
@@ -58,9 +60,10 @@
             // 
             // BrandDelete
             // 
-            this.BrandDelete.Location = new System.Drawing.Point(12, 71);
+            this.BrandDelete.Location = new System.Drawing.Point(16, 87);
+            this.BrandDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BrandDelete.Name = "BrandDelete";
-            this.BrandDelete.Size = new System.Drawing.Size(134, 23);
+            this.BrandDelete.Size = new System.Drawing.Size(179, 28);
             this.BrandDelete.TabIndex = 4;
             this.BrandDelete.Text = "Изтриване на марка";
             this.BrandDelete.UseVisualStyleBackColor = true;
@@ -70,27 +73,29 @@
             // 
             this.brandGridView.AllowUserToAddRows = false;
             this.brandGridView.AllowUserToDeleteRows = false;
-            this.brandGridView.BackgroundColor = System.Drawing.Color.Maroon;
+            this.brandGridView.BackgroundColor = System.Drawing.Color.White;
             this.brandGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.brandGridView.Location = new System.Drawing.Point(12, 114);
+            this.brandGridView.Location = new System.Drawing.Point(10, 140);
+            this.brandGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.brandGridView.MultiSelect = false;
             this.brandGridView.Name = "brandGridView";
             this.brandGridView.ReadOnly = true;
             this.brandGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.brandGridView.Size = new System.Drawing.Size(263, 150);
+            this.brandGridView.Size = new System.Drawing.Size(351, 185);
             this.brandGridView.TabIndex = 5;
             // 
             // BrandList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Maroon;
-            this.ClientSize = new System.Drawing.Size(277, 276);
+            this.BackColor = System.Drawing.Color.Silver;
+            this.ClientSize = new System.Drawing.Size(369, 340);
             this.Controls.Add(this.brandGridView);
             this.Controls.Add(this.BrandDelete);
             this.Controls.Add(this.BrandEdit);
             this.Controls.Add(this.BrandAdd);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "BrandList";
             this.Text = "Марка";
             ((System.ComponentModel.ISupportInitialize)(this.brandGridView)).EndInit();

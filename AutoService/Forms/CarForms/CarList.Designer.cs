@@ -39,9 +39,10 @@
             // 
             // CarAddButton
             // 
-            this.CarAddButton.Location = new System.Drawing.Point(12, 2);
+            this.CarAddButton.Location = new System.Drawing.Point(16, 2);
+            this.CarAddButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CarAddButton.Name = "CarAddButton";
-            this.CarAddButton.Size = new System.Drawing.Size(143, 23);
+            this.CarAddButton.Size = new System.Drawing.Size(191, 28);
             this.CarAddButton.TabIndex = 0;
             this.CarAddButton.Text = "Добавяне на автомобил";
             this.CarAddButton.UseVisualStyleBackColor = true;
@@ -49,9 +50,10 @@
             // 
             // CarRmv
             // 
-            this.CarRmv.Location = new System.Drawing.Point(161, 2);
+            this.CarRmv.Location = new System.Drawing.Point(215, 2);
+            this.CarRmv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CarRmv.Name = "CarRmv";
-            this.CarRmv.Size = new System.Drawing.Size(143, 23);
+            this.CarRmv.Size = new System.Drawing.Size(191, 28);
             this.CarRmv.TabIndex = 1;
             this.CarRmv.Text = "Изтриване на автомобил";
             this.CarRmv.UseVisualStyleBackColor = true;
@@ -61,7 +63,7 @@
             // 
             this.carsDataGridView.AllowUserToAddRows = false;
             this.carsDataGridView.AllowUserToDeleteRows = false;
-            this.carsDataGridView.BackgroundColor = System.Drawing.Color.LightGray;
+            this.carsDataGridView.BackgroundColor = System.Drawing.Color.White;
             this.carsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.carsDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
@@ -74,23 +76,23 @@
             this.carsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.carsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.carsDataGridView.GridColor = System.Drawing.SystemColors.ActiveBorder;
-            this.carsDataGridView.Location = new System.Drawing.Point(-2, 30);
-            this.carsDataGridView.Margin = new System.Windows.Forms.Padding(2);
+            this.carsDataGridView.Location = new System.Drawing.Point(-3, 37);
+            this.carsDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.carsDataGridView.MultiSelect = false;
             this.carsDataGridView.Name = "carsDataGridView";
             this.carsDataGridView.ReadOnly = true;
             this.carsDataGridView.RowTemplate.Height = 24;
             this.carsDataGridView.RowTemplate.ReadOnly = true;
             this.carsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.carsDataGridView.Size = new System.Drawing.Size(1245, 357);
+            this.carsDataGridView.Size = new System.Drawing.Size(1660, 439);
             this.carsDataGridView.TabIndex = 2;
             // 
             // editCarButton
             // 
-            this.editCarButton.Location = new System.Drawing.Point(309, 2);
-            this.editCarButton.Margin = new System.Windows.Forms.Padding(2);
+            this.editCarButton.Location = new System.Drawing.Point(412, 2);
+            this.editCarButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.editCarButton.Name = "editCarButton";
-            this.editCarButton.Size = new System.Drawing.Size(70, 23);
+            this.editCarButton.Size = new System.Drawing.Size(93, 28);
             this.editCarButton.TabIndex = 3;
             this.editCarButton.Text = "Редакция";
             this.editCarButton.UseVisualStyleBackColor = true;
@@ -98,15 +100,16 @@
             // 
             // CarList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::AutoService.Properties.Resources.carFormBackGround;
-            this.ClientSize = new System.Drawing.Size(1248, 387);
+            this.ClientSize = new System.Drawing.Size(1664, 476);
             this.Controls.Add(this.editCarButton);
             this.Controls.Add(this.carsDataGridView);
             this.Controls.Add(this.CarRmv);
             this.Controls.Add(this.CarAddButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "CarList";
             this.Text = "Автомобили";
             ((System.ComponentModel.ISupportInitialize)(this.carsDataGridView)).EndInit();
