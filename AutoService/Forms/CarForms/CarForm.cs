@@ -88,7 +88,7 @@ namespace AutoService.Forms
                 engineVolumePictureBox.Visible = true;
                 error = true;
             }
-            if (yearTextbox.Text.Length <= 0 && !Int32.TryParse(yearTextbox.Text, out result)) {
+            if (yearTextbox.Text.Length <= 0 || !Int32.TryParse(yearTextbox.Text, out result)) {
                 yearPictureBox.Visible = true;
                 error = true;
             }

@@ -39,6 +39,7 @@ namespace AutoService.Forms.PartForms
         }
         private void saveButton_Click(object sender, EventArgs e)
         {
+            double result;
             numberPictureBox.Visible = false;
             namePictureBox.Visible = false;
             pricePictureBox.Visible = false;
@@ -51,7 +52,7 @@ namespace AutoService.Forms.PartForms
                 numberPictureBox.Visible = true;
                 error = true;
             }
-            if (priceTextBox.Text.Length == 0) {
+            if (priceTextBox.Text.Length == 0 || !Double.TryParse(priceTextBox.Text, out result)) {
                 pricePictureBox.Visible = true;
                 error = true;
             }
