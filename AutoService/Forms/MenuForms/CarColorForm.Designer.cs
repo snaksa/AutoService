@@ -40,8 +40,8 @@
             // 
             // CarColorAddButton
             // 
-            this.CarColorAddButton.Location = new System.Drawing.Point(71, 57);
-            this.CarColorAddButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CarColorAddButton.Location = new System.Drawing.Point(88, 53);
+            this.CarColorAddButton.Margin = new System.Windows.Forms.Padding(4);
             this.CarColorAddButton.Name = "CarColorAddButton";
             this.CarColorAddButton.Size = new System.Drawing.Size(100, 28);
             this.CarColorAddButton.TabIndex = 10;
@@ -62,18 +62,18 @@
             // carcolorTextBox
             // 
             this.carcolorTextBox.Location = new System.Drawing.Point(71, 20);
-            this.carcolorTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.carcolorTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.carcolorTextBox.Name = "carcolorTextBox";
             this.carcolorTextBox.Size = new System.Drawing.Size(132, 22);
             this.carcolorTextBox.TabIndex = 8;
             // 
             // namePictureBox
             // 
-            this.namePictureBox.Image = global::AutoService.Properties.Resources.repair;
+            this.namePictureBox.Image = global::AutoService.Properties.Resources.high_priority;
             this.namePictureBox.Location = new System.Drawing.Point(213, 20);
-            this.namePictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.namePictureBox.Margin = new System.Windows.Forms.Padding(4);
             this.namePictureBox.Name = "namePictureBox";
-            this.namePictureBox.Size = new System.Drawing.Size(37, 25);
+            this.namePictureBox.Size = new System.Drawing.Size(26, 22);
             this.namePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.namePictureBox.TabIndex = 11;
             this.namePictureBox.TabStop = false;
@@ -90,7 +90,7 @@
             this.Controls.Add(this.label);
             this.Controls.Add(this.carcolorTextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CarColorForm";
             this.Text = "Цвят:";
             ((System.ComponentModel.ISupportInitialize)(this.namePictureBox)).EndInit();

@@ -44,8 +44,8 @@
             // 
             // ModelAddButton
             // 
-            this.ModelAddButton.Location = new System.Drawing.Point(87, 105);
-            this.ModelAddButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ModelAddButton.Location = new System.Drawing.Point(124, 90);
+            this.ModelAddButton.Margin = new System.Windows.Forms.Padding(4);
             this.ModelAddButton.Name = "ModelAddButton";
             this.ModelAddButton.Size = new System.Drawing.Size(100, 28);
             this.ModelAddButton.TabIndex = 7;
@@ -66,7 +66,7 @@
             // modelTextBox
             // 
             this.modelTextBox.Location = new System.Drawing.Point(108, 17);
-            this.modelTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.modelTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.modelTextBox.Name = "modelTextBox";
             this.modelTextBox.Size = new System.Drawing.Size(132, 22);
             this.modelTextBox.TabIndex = 5;
@@ -91,9 +91,9 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::AutoService.Properties.Resources.repair;
+            this.pictureBox1.Image = global::AutoService.Properties.Resources.high_priority;
             this.pictureBox1.Location = new System.Drawing.Point(251, 16);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(28, 26);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -103,9 +103,9 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::AutoService.Properties.Resources.repair;
-            this.pictureBox2.Location = new System.Drawing.Point(248, 53);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Image = global::AutoService.Properties.Resources.high_priority;
+            this.pictureBox2.Location = new System.Drawing.Point(248, 52);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(28, 26);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -127,7 +127,7 @@
             this.Controls.Add(this.label);
             this.Controls.Add(this.modelTextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ModelForm";
             this.Text = "Модел";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

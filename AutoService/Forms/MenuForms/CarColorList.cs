@@ -36,7 +36,7 @@ namespace AutoService.Forms.MenuForms
             using (SqlConnection con = new SqlConnection(CarColorRepository.connectionString))
             {
                 con.Open();
-                using (SqlDataAdapter adapter = new SqlDataAdapter("SELECT id AS ID, name AS Name FROM colors", con))
+                using (SqlDataAdapter adapter = new SqlDataAdapter("SELECT id AS ID, name AS Име FROM colors", con))
                 {
                     DataTable table = new DataTable();
                     adapter.Fill(table);
@@ -57,7 +57,7 @@ namespace AutoService.Forms.MenuForms
                 return;
             }
 
-            DialogResult result = MessageBox.Show("Are you sure you want to delete the record?", "Are you sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("Сигурни ли сте, че искате да изтриете записа?", "Изтриване?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 CarColorRepository.Remove(index);

@@ -42,24 +42,27 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 14);
+            this.label1.Location = new System.Drawing.Point(8, 17);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 13);
+            this.label1.Size = new System.Drawing.Size(39, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Име:";
             // 
             // nameTextBox
             // 
-            this.nameTextBox.Location = new System.Drawing.Point(43, 12);
+            this.nameTextBox.Location = new System.Drawing.Point(57, 15);
+            this.nameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.nameTextBox.Size = new System.Drawing.Size(132, 22);
             this.nameTextBox.TabIndex = 1;
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(43, 49);
+            this.saveButton.Location = new System.Drawing.Point(75, 54);
+            this.saveButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(75, 23);
+            this.saveButton.Size = new System.Drawing.Size(100, 28);
             this.saveButton.TabIndex = 2;
             this.saveButton.Text = "Запази";
             this.saveButton.UseVisualStyleBackColor = true;
@@ -68,17 +71,20 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(171, 26);
+            this.label2.Location = new System.Drawing.Point(228, 32);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 13);
+            this.label2.Size = new System.Drawing.Size(0, 17);
             this.label2.TabIndex = 3;
             // 
             // namePictureBox
             // 
-            this.namePictureBox.Image = global::AutoService.Properties.Resources.repair;
-            this.namePictureBox.Location = new System.Drawing.Point(149, 12);
+            this.namePictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.namePictureBox.Image = global::AutoService.Properties.Resources.high_priority;
+            this.namePictureBox.Location = new System.Drawing.Point(199, 15);
+            this.namePictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.namePictureBox.Name = "namePictureBox";
-            this.namePictureBox.Size = new System.Drawing.Size(21, 19);
+            this.namePictureBox.Size = new System.Drawing.Size(28, 23);
             this.namePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.namePictureBox.TabIndex = 4;
             this.namePictureBox.TabStop = false;
@@ -86,16 +92,17 @@
             // 
             // EmployeeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(196, 84);
+            this.ClientSize = new System.Drawing.Size(245, 103);
             this.Controls.Add(this.namePictureBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "EmployeeForm";
             this.Text = "Служител";
             ((System.ComponentModel.ISupportInitialize)(this.namePictureBox)).EndInit();

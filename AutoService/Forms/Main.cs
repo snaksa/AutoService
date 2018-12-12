@@ -2,6 +2,7 @@
 using AutoService.Forms.EmloyeeForms;
 using AutoService.Forms.MenuForms;
 using AutoService.Forms.PartForms;
+using AutoService.Forms.StatisticsForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -63,6 +64,12 @@ namespace AutoService.Forms
         private void cartsButton_Click(object sender, EventArgs e)
         {
             CardList form = new CardList();
+            form.Show();
+        }
+
+        private void statsButton_Click(object sender, EventArgs e)
+        {
+            StatsList form = new StatsList();
             form.Show();
         }
     }

@@ -66,17 +66,18 @@
             // RemoveCardButton
             // 
             this.RemoveCardButton.Location = new System.Drawing.Point(425, 15);
-            this.RemoveCardButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RemoveCardButton.Margin = new System.Windows.Forms.Padding(4);
             this.RemoveCardButton.Name = "RemoveCardButton";
             this.RemoveCardButton.Size = new System.Drawing.Size(191, 28);
             this.RemoveCardButton.TabIndex = 5;
             this.RemoveCardButton.Text = "Изтриване на карта";
             this.RemoveCardButton.UseVisualStyleBackColor = true;
+            this.RemoveCardButton.Click += new System.EventHandler(this.RemoveCardButton_Click);
             // 
             // CardAddButton
             // 
             this.CardAddButton.Location = new System.Drawing.Point(15, 15);
-            this.CardAddButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CardAddButton.Margin = new System.Windows.Forms.Padding(4);
             this.CardAddButton.Name = "CardAddButton";
             this.CardAddButton.Size = new System.Drawing.Size(273, 28);
             this.CardAddButton.TabIndex = 4;
@@ -95,7 +96,7 @@
             this.Controls.Add(this.RemoveCardButton);
             this.Controls.Add(this.CardAddButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CardList";
             this.Text = "Ремонтни карти";
             ((System.ComponentModel.ISupportInitialize)(this.cardsDataGridView)).EndInit();

@@ -90,14 +90,21 @@ namespace AutoService.Models
             }
         }
 
-        public static void Remove(RepairCard card)
+        public static void Remove(int id)
         {
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 con.Open();
+
+                using (SqlCommand command = new SqlCommand("DELETE FROM card_parts WHERE cardId = @id", con))
+                {
+                    command.Parameters.AddWithValue("@id", id);
+                    command.ExecuteNonQuery();
+                }
+
                 using (SqlCommand command = new SqlCommand("DELETE FROM cards WHERE id = @id", con))
                 {
-                    command.Parameters.AddWithValue("@id", card.Id);
+                    command.Parameters.AddWithValue("@id", id);
                     command.ExecuteNonQuery();
                 }
             }
@@ -150,6 +157,87 @@ namespace AutoService.Models
                     command.ExecuteNonQuery();
                 }
             }
+        }
+
+        public static SqlDataAdapter GetAfterStartDate(DateTime date)
+        {
+            SqlConnection con = new SqlConnection(CarRepository.connectionString);
+            con.Open();
+            SqlDataAdapter adapter = new SqlDataAdapter(
+                 "SELECT c.id as ID, c.number as Номер, e.name as 'Име на служител', c.dateIn as 'Приемане', c.dateOut as 'Изписване', " +
+                 "car.regNumber as 'Рег. номер', car.ownerName as 'Собственик', TotalPrice as 'Обща цена' " +
+                 "FROM cards c " +
+                 "LEFT JOIN employees e ON c.employeeId = e.id " +
+                 "LEFT JOIN cars car ON c.carId = car.id " +
+                 "LEFT JOIN(" +
+                 "SELECT cp.cardId as cId, SUM(part.price) as TotalPrice " +
+                 "FROM card_parts cp " +
+                 "LEFT JOIN parts part ON part.id = cp.partId " +
+                 "GROUP BY cp.cardId) s ON cId = c.id " +
+                 "WHERE c.dateIn >= @date ", con);
+            adapter.SelectCommand.Parameters.AddWithValue("@date", date);
+            return adapter;
+        }
+
+        public static SqlDataAdapter GetBeforeEndDate(DateTime date)
+        {
+            SqlConnection con = new SqlConnection(CarRepository.connectionString);
+            con.Open();
+            SqlDataAdapter adapter = new SqlDataAdapter(
+                "SELECT c.id as ID, c.number as Номер, e.name as 'Име на служител', c.dateIn as 'Приемане', c.dateOut as 'Изписване', " +
+                 "car.regNumber as 'Рег. номер', car.ownerName as 'Собственик', TotalPrice as 'Обща цена' " +
+                 "FROM cards c " +
+                 "LEFT JOIN employees e ON c.employeeId = e.id " +
+                 "LEFT JOIN cars car ON c.carId = car.id " +
+                 "LEFT JOIN(" +
+                 "SELECT cp.cardId as cId, SUM(part.price) as TotalPrice " +
+                 "FROM card_parts cp " +
+                 "LEFT JOIN parts part ON part.id = cp.partId " +
+                 "GROUP BY cp.cardId) s ON cId = c.id " +
+                 "WHERE c.dateOut <= @date ", con);
+            adapter.SelectCommand.Parameters.AddWithValue("@date", date);
+            return adapter;
+        }
+
+        public static SqlDataAdapter GetByCar(Car car)
+        {
+            SqlConnection con = new SqlConnection(CarRepository.connectionString);
+            con.Open();
+            SqlDataAdapter adapter = new SqlDataAdapter(
+                "SELECT c.id as ID, c.number as Номер, e.name as 'Име на служител', c.dateIn as 'Приемане', c.dateOut as 'Изписване', " +
+                 "car.regNumber as 'Рег. номер', car.ownerName as 'Собственик', TotalPrice as 'Обща цена' " +
+                 "FROM cards c " +
+                 "LEFT JOIN employees e ON c.employeeId = e.id " +
+                 "LEFT JOIN cars car ON c.carId = car.id " +
+                 "LEFT JOIN(" +
+                 "SELECT cp.cardId as cId, SUM(part.price) as TotalPrice " +
+                 "FROM card_parts cp " +
+                 "LEFT JOIN parts part ON part.id = cp.partId " +
+                 "GROUP BY cp.cardId) s ON cId = c.id " +
+                 "WHERE c.carId = @id ", con);
+
+            adapter.SelectCommand.Parameters.AddWithValue("@id", car.Id);
+            return adapter;
+
+        }
+
+        public static SqlDataAdapter GetNotReady()
+        {
+            SqlConnection con = new SqlConnection(CarRepository.connectionString);
+            con.Open();
+            SqlDataAdapter adapter = new SqlDataAdapter(
+                "SELECT c.id as ID, c.number as Номер, e.name as 'Име на служител', c.dateIn as 'Приемане', c.dateOut as 'Изписване', " +
+                 "car.regNumber as 'Рег. номер', car.ownerName as 'Собственик', TotalPrice as 'Обща цена' " +
+                 "FROM cards c " +
+                 "LEFT JOIN employees e ON c.employeeId = e.id " +
+                 "LEFT JOIN cars car ON c.carId = car.id " +
+                 "LEFT JOIN(" +
+                 "SELECT cp.cardId as cId, SUM(part.price) as TotalPrice " +
+                 "FROM card_parts cp " +
+                 "LEFT JOIN parts part ON part.id = cp.partId " +
+                 "GROUP BY cp.cardId) s ON cId = c.id " +
+                 "WHERE c.dateOut IS NULL", con);
+            return adapter;
         }
     }
 }

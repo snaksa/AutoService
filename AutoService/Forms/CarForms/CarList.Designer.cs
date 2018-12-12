@@ -40,7 +40,7 @@
             // CarAddButton
             // 
             this.CarAddButton.Location = new System.Drawing.Point(16, 2);
-            this.CarAddButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CarAddButton.Margin = new System.Windows.Forms.Padding(4);
             this.CarAddButton.Name = "CarAddButton";
             this.CarAddButton.Size = new System.Drawing.Size(191, 28);
             this.CarAddButton.TabIndex = 0;
@@ -51,7 +51,7 @@
             // CarRmv
             // 
             this.CarRmv.Location = new System.Drawing.Point(215, 2);
-            this.CarRmv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CarRmv.Margin = new System.Windows.Forms.Padding(4);
             this.CarRmv.Name = "CarRmv";
             this.CarRmv.Size = new System.Drawing.Size(191, 28);
             this.CarRmv.TabIndex = 1;
@@ -76,7 +76,7 @@
             this.carsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.carsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.carsDataGridView.GridColor = System.Drawing.SystemColors.ActiveBorder;
-            this.carsDataGridView.Location = new System.Drawing.Point(-3, 37);
+            this.carsDataGridView.Location = new System.Drawing.Point(16, 37);
             this.carsDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.carsDataGridView.MultiSelect = false;
             this.carsDataGridView.Name = "carsDataGridView";
@@ -84,7 +84,7 @@
             this.carsDataGridView.RowTemplate.Height = 24;
             this.carsDataGridView.RowTemplate.ReadOnly = true;
             this.carsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.carsDataGridView.Size = new System.Drawing.Size(1660, 439);
+            this.carsDataGridView.Size = new System.Drawing.Size(1636, 428);
             this.carsDataGridView.TabIndex = 2;
             // 
             // editCarButton
@@ -109,7 +109,7 @@
             this.Controls.Add(this.CarRmv);
             this.Controls.Add(this.CarAddButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CarList";
             this.Text = "Автомобили";
             ((System.ComponentModel.ISupportInitialize)(this.carsDataGridView)).EndInit();

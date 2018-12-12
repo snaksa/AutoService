@@ -38,17 +38,19 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 14);
+            this.label1.Location = new System.Drawing.Point(8, 17);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(44, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Част:";
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(43, 49);
+            this.saveButton.Location = new System.Drawing.Point(65, 54);
+            this.saveButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(75, 23);
+            this.saveButton.Size = new System.Drawing.Size(100, 28);
             this.saveButton.TabIndex = 2;
             this.saveButton.Text = "Запази";
             this.saveButton.UseVisualStyleBackColor = true;
@@ -57,31 +59,33 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(171, 26);
+            this.label2.Location = new System.Drawing.Point(228, 32);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 13);
+            this.label2.Size = new System.Drawing.Size(0, 17);
             this.label2.TabIndex = 3;
             // 
             // partsCombobox
             // 
             this.partsCombobox.FormattingEnabled = true;
-            this.partsCombobox.Location = new System.Drawing.Point(43, 14);
-            this.partsCombobox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.partsCombobox.Location = new System.Drawing.Point(57, 17);
+            this.partsCombobox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.partsCombobox.Name = "partsCombobox";
-            this.partsCombobox.Size = new System.Drawing.Size(92, 21);
+            this.partsCombobox.Size = new System.Drawing.Size(121, 24);
             this.partsCombobox.TabIndex = 4;
             // 
             // SelectPartForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(196, 84);
+            this.ClientSize = new System.Drawing.Size(261, 103);
             this.Controls.Add(this.partsCombobox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "SelectPartForm";
             this.Text = "Избор на част";
             this.ResumeLayout(false);

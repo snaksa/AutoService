@@ -99,7 +99,7 @@
             // saveButton
             // 
             this.saveButton.Location = new System.Drawing.Point(368, 311);
-            this.saveButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.saveButton.Margin = new System.Windows.Forms.Padding(4);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(100, 28);
             this.saveButton.TabIndex = 3;
@@ -259,9 +259,11 @@
             // 
             // numberPictureBox
             // 
-            this.numberPictureBox.Image = global::AutoService.Properties.Resources.repair;
-            this.numberPictureBox.Location = new System.Drawing.Point(340, 114);
-            this.numberPictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numberPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.numberPictureBox.ErrorImage = global::AutoService.Properties.Resources.car;
+            this.numberPictureBox.Image = global::AutoService.Properties.Resources.high_priority;
+            this.numberPictureBox.Location = new System.Drawing.Point(340, 111);
+            this.numberPictureBox.Margin = new System.Windows.Forms.Padding(4);
             this.numberPictureBox.Name = "numberPictureBox";
             this.numberPictureBox.Size = new System.Drawing.Size(31, 23);
             this.numberPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -271,9 +273,10 @@
             // 
             // dateInPictureBox
             // 
-            this.dateInPictureBox.Image = global::AutoService.Properties.Resources.repair;
-            this.dateInPictureBox.Location = new System.Drawing.Point(340, 153);
-            this.dateInPictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateInPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.dateInPictureBox.Image = global::AutoService.Properties.Resources.high_priority;
+            this.dateInPictureBox.Location = new System.Drawing.Point(340, 151);
+            this.dateInPictureBox.Margin = new System.Windows.Forms.Padding(4);
             this.dateInPictureBox.Name = "dateInPictureBox";
             this.dateInPictureBox.Size = new System.Drawing.Size(31, 23);
             this.dateInPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -283,9 +286,10 @@
             // 
             // carPictureBox
             // 
-            this.carPictureBox.Image = global::AutoService.Properties.Resources.repair;
-            this.carPictureBox.Location = new System.Drawing.Point(713, 111);
-            this.carPictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.carPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.carPictureBox.Image = global::AutoService.Properties.Resources.high_priority;
+            this.carPictureBox.Location = new System.Drawing.Point(713, 109);
+            this.carPictureBox.Margin = new System.Windows.Forms.Padding(4);
             this.carPictureBox.Name = "carPictureBox";
             this.carPictureBox.Size = new System.Drawing.Size(31, 23);
             this.carPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -295,9 +299,10 @@
             // 
             // employeePictureBox
             // 
-            this.employeePictureBox.Image = global::AutoService.Properties.Resources.repair;
-            this.employeePictureBox.Location = new System.Drawing.Point(713, 148);
-            this.employeePictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.employeePictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.employeePictureBox.Image = global::AutoService.Properties.Resources.high_priority;
+            this.employeePictureBox.Location = new System.Drawing.Point(713, 147);
+            this.employeePictureBox.Margin = new System.Windows.Forms.Padding(4);
             this.employeePictureBox.Name = "employeePictureBox";
             this.employeePictureBox.Size = new System.Drawing.Size(31, 23);
             this.employeePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -307,9 +312,10 @@
             // 
             // descriptionPictureBox
             // 
-            this.descriptionPictureBox.Image = global::AutoService.Properties.Resources.repair;
+            this.descriptionPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.descriptionPictureBox.Image = global::AutoService.Properties.Resources.high_priority;
             this.descriptionPictureBox.Location = new System.Drawing.Point(713, 185);
-            this.descriptionPictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.descriptionPictureBox.Margin = new System.Windows.Forms.Padding(4);
             this.descriptionPictureBox.Name = "descriptionPictureBox";
             this.descriptionPictureBox.Size = new System.Drawing.Size(31, 23);
             this.descriptionPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -348,7 +354,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CardForm";
             this.Text = "Ремонтна карта";
             ((System.ComponentModel.ISupportInitialize)(this.partsGridView)).EndInit();

@@ -119,7 +119,7 @@ namespace AutoService.Forms.CardForms
             {
                 con.Open();
                 using (SqlDataAdapter adapter = new SqlDataAdapter(
-                    "SELECT p.id as ID, part.name as Name, part.number as Number, part.price as Price " +
+                    "SELECT p.id as ID, part.name as Име, part.number as Номер, part.price as Цена " +
                     "FROM card_parts p " +
                     "LEFT JOIN parts part ON part.id = p.partId " +
                     "WHERE p.cardId = @id", con))
@@ -147,7 +147,7 @@ namespace AutoService.Forms.CardForms
 
         private void removePartButton_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure?", "Are you sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("Сигурни ли сте, че искате да изтриете записа?", "Изтриване?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 int index = partsGridView.SelectedCells.Count > 0 ? partsGridView.SelectedCells[0].RowIndex : -1;

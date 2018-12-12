@@ -49,7 +49,7 @@ namespace AutoService
             {
                 con.Open();
                 using (SqlDataAdapter adapter = new SqlDataAdapter(
-                     "SELECT p.id as ID, p.name as Name, p.number as Number, p.price as Price FROM parts p"
+                     "SELECT p.id as ID, p.name as Име, p.number as Номер, p.price as Цена FROM parts p"
                     , con))
                 {
                     DataTable table = new DataTable();
@@ -59,7 +59,7 @@ namespace AutoService
             }
         }
 
-   
+
         private void partEditButton_Click(object sender, EventArgs e)
         {
             int index = partsDataGridView.SelectedCells.Count > 0 ? partsDataGridView.SelectedCells[0].RowIndex : -1;
@@ -79,12 +79,12 @@ namespace AutoService
                 return;
             }
 
-            DialogResult result = MessageBox.Show("Are you sure you want to delete the record?", "Are you sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("Сигурни ли сте, че искате да изтриете записа?", "Изтриване?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 if (PartRepository.IsUsed(index))
                 {
-                    MessageBox.Show("Row is used in repair card!", "Row used!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Частта се използва в карта!", "Използвана част!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
                 {
@@ -94,5 +94,5 @@ namespace AutoService
             }
         }
     }
-    }
+}
 

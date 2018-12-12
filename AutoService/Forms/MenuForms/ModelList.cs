@@ -37,7 +37,7 @@ namespace AutoService.Forms.MenuForms
             using (SqlConnection con = new SqlConnection(ModelRepository.connectionString))
             {
                 con.Open();
-                using (SqlDataAdapter adapter = new SqlDataAdapter("SELECT m.id AS ID, m.name AS Name, b.name as Brand FROM models m LEFT JOIN brands b ON m.brandId = b.id", con))
+                using (SqlDataAdapter adapter = new SqlDataAdapter("SELECT m.id AS ID, m.name AS Име, b.name as Марка FROM models m LEFT JOIN brands b ON m.brandId = b.id", con))
                 {
                     DataTable table = new DataTable();
                     adapter.Fill(table);
@@ -58,7 +58,7 @@ namespace AutoService.Forms.MenuForms
                 return;
             }
 
-            DialogResult result = MessageBox.Show("Are you sure you want to delete the record?", "Are you sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("Сигурни ли сте, че искате да изтриете записа?", "Изтриване?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 ModelRepository.Remove(index);

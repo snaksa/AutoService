@@ -48,9 +48,9 @@ namespace AutoService
             {
                 con.Open();
                 using (SqlDataAdapter adapter = new SqlDataAdapter(
-                     "SELECT c.id as ID, c.regNumber as RegNumber, b.name as Brand, m.name as Model, "
-                    + "c.year as Year, c.engineNumber as EngineNumber, c.frameNumber as FrameNumber, col.name as ColorName, c.engineVolume as EngineVolume, "
-                    + "c.description as Description, c.ownerName as OwnerName, c.contactNumber as ContactNumber FROM cars c "
+                     "SELECT c.id as ID, c.regNumber as 'Рег. номер', b.name as 'Марка', m.name as 'Модел', "
+                    + "c.year as 'Година', c.engineNumber as 'Номер на двигател', c.frameNumber as 'Номер на рама', col.name as 'Цвят', c.engineVolume as 'Обем на двигателя', "
+                    + "c.description as 'Описание', c.ownerName as 'Собственик', c.contactNumber as 'Телефон' FROM cars c "
                     + "LEFT JOIN models m ON m.id = c.modelId "
                     + "LEFT JOIN brands b ON b.id = m.brandId "
                     + "LEFT JOIN colors col ON col.id = c.colorId "
@@ -65,7 +65,7 @@ namespace AutoService
 
         private void CarRmv_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure?", "Are you sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("Сигурни ли сте, че искате да изтриете записа?", "Изтриване?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 int index = carsDataGridView.SelectedCells.Count > 0 ? carsDataGridView.SelectedCells[0].RowIndex : -1;

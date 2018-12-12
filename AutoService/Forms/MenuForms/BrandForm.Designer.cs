@@ -53,15 +53,15 @@
             // brandTextBox
             // 
             this.brandTextBox.Location = new System.Drawing.Point(105, 15);
-            this.brandTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.brandTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.brandTextBox.Name = "brandTextBox";
             this.brandTextBox.Size = new System.Drawing.Size(132, 22);
             this.brandTextBox.TabIndex = 2;
             // 
             // BrandAddButton
             // 
-            this.BrandAddButton.Location = new System.Drawing.Point(71, 55);
-            this.BrandAddButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BrandAddButton.Location = new System.Drawing.Point(123, 47);
+            this.BrandAddButton.Margin = new System.Windows.Forms.Padding(4);
             this.BrandAddButton.Name = "BrandAddButton";
             this.BrandAddButton.Size = new System.Drawing.Size(100, 28);
             this.BrandAddButton.TabIndex = 4;
@@ -71,9 +71,9 @@
             // 
             // namePictureBox
             // 
-            this.namePictureBox.Image = global::AutoService.Properties.Resources.repair;
-            this.namePictureBox.Location = new System.Drawing.Point(247, 16);
-            this.namePictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.namePictureBox.Image = global::AutoService.Properties.Resources.high_priority;
+            this.namePictureBox.Location = new System.Drawing.Point(245, 15);
+            this.namePictureBox.Margin = new System.Windows.Forms.Padding(4);
             this.namePictureBox.Name = "namePictureBox";
             this.namePictureBox.Size = new System.Drawing.Size(31, 23);
             this.namePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -92,7 +92,7 @@
             this.Controls.Add(this.label);
             this.Controls.Add(this.brandTextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "BrandForm";
             this.Text = "Марка";
             ((System.ComponentModel.ISupportInitialize)(this.namePictureBox)).EndInit();

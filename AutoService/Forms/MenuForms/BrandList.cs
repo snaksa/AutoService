@@ -43,14 +43,11 @@ namespace AutoService.Forms
             using (SqlConnection con = new SqlConnection(BrandRepository.connectionString))
             {
                 con.Open();
-                using (SqlCommand command = new SqlCommand("SELECT id AS ID, name AS Name FROM brands", con))
+                using (SqlDataAdapter adapter = new SqlDataAdapter("SELECT id AS ID, name AS Име FROM brands", con))
                 {
-                    using (SqlDataAdapter adapter = new SqlDataAdapter("SELECT id AS ID, name AS Name FROM brands", con))
-                    {
-                        DataTable table = new DataTable();
-                        adapter.Fill(table);
-                        brandGridView.DataSource = table;
-                    }
+                    DataTable table = new DataTable();
+                    adapter.Fill(table);
+                    brandGridView.DataSource = table;
                 }
             }
         }
@@ -65,7 +62,7 @@ namespace AutoService.Forms
                 return;
             }
 
-            DialogResult result = MessageBox.Show("Are you sure you want to delete the record?", "Are you sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("Сигурни ли сте, че искате да изтриете записа?", "Изтриване?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 BrandRepository.Remove(index);
