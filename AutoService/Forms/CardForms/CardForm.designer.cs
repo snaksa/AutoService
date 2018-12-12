@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CardForm));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,7 +49,18 @@
             this.partsGridView = new System.Windows.Forms.DataGridView();
             this.addPartButton = new System.Windows.Forms.Button();
             this.removePartButton = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.numberPictureBox = new System.Windows.Forms.PictureBox();
+            this.dateInPictureBox = new System.Windows.Forms.PictureBox();
+            this.carPictureBox = new System.Windows.Forms.PictureBox();
+            this.employeePictureBox = new System.Windows.Forms.PictureBox();
+            this.descriptionPictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.partsGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numberPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateInPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeePictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.descriptionPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -235,12 +247,72 @@
             this.removePartButton.UseVisualStyleBackColor = true;
             this.removePartButton.Click += new System.EventHandler(this.removePartButton_Click);
             // 
+            // numberPictureBox
+            // 
+            this.numberPictureBox.Image = global::AutoService.Properties.Resources.repair;
+            this.numberPictureBox.Location = new System.Drawing.Point(255, 93);
+            this.numberPictureBox.Name = "numberPictureBox";
+            this.numberPictureBox.Size = new System.Drawing.Size(23, 19);
+            this.numberPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.numberPictureBox.TabIndex = 22;
+            this.numberPictureBox.TabStop = false;
+            this.numberPictureBox.MouseHover += new System.EventHandler(this.numberPictureBox_MouseHover);
+            // 
+            // dateInPictureBox
+            // 
+            this.dateInPictureBox.Image = global::AutoService.Properties.Resources.repair;
+            this.dateInPictureBox.Location = new System.Drawing.Point(255, 124);
+            this.dateInPictureBox.Name = "dateInPictureBox";
+            this.dateInPictureBox.Size = new System.Drawing.Size(23, 19);
+            this.dateInPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.dateInPictureBox.TabIndex = 23;
+            this.dateInPictureBox.TabStop = false;
+            this.dateInPictureBox.MouseHover += new System.EventHandler(this.dateInPictureBox_MouseHover);
+            // 
+            // carPictureBox
+            // 
+            this.carPictureBox.Image = global::AutoService.Properties.Resources.repair;
+            this.carPictureBox.Location = new System.Drawing.Point(535, 90);
+            this.carPictureBox.Name = "carPictureBox";
+            this.carPictureBox.Size = new System.Drawing.Size(23, 19);
+            this.carPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.carPictureBox.TabIndex = 24;
+            this.carPictureBox.TabStop = false;
+            this.carPictureBox.MouseHover += new System.EventHandler(this.carPictureBox_MouseHover);
+            // 
+            // employeePictureBox
+            // 
+            this.employeePictureBox.Image = global::AutoService.Properties.Resources.repair;
+            this.employeePictureBox.Location = new System.Drawing.Point(535, 120);
+            this.employeePictureBox.Name = "employeePictureBox";
+            this.employeePictureBox.Size = new System.Drawing.Size(23, 19);
+            this.employeePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.employeePictureBox.TabIndex = 25;
+            this.employeePictureBox.TabStop = false;
+            this.employeePictureBox.MouseHover += new System.EventHandler(this.employeePictureBox_MouseHover);
+            // 
+            // descriptionPictureBox
+            // 
+            this.descriptionPictureBox.Image = global::AutoService.Properties.Resources.repair;
+            this.descriptionPictureBox.Location = new System.Drawing.Point(535, 150);
+            this.descriptionPictureBox.Name = "descriptionPictureBox";
+            this.descriptionPictureBox.Size = new System.Drawing.Size(23, 19);
+            this.descriptionPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.descriptionPictureBox.TabIndex = 26;
+            this.descriptionPictureBox.TabStop = false;
+            this.descriptionPictureBox.MouseHover += new System.EventHandler(this.descriptionPictureBox_MouseHover);
+            // 
             // CardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::AutoService.Properties.Resources.bckgrndRepairCard;
             this.ClientSize = new System.Drawing.Size(662, 513);
+            this.Controls.Add(this.descriptionPictureBox);
+            this.Controls.Add(this.employeePictureBox);
+            this.Controls.Add(this.carPictureBox);
+            this.Controls.Add(this.dateInPictureBox);
+            this.Controls.Add(this.numberPictureBox);
             this.Controls.Add(this.removePartButton);
             this.Controls.Add(this.addPartButton);
             this.Controls.Add(this.partsGridView);
@@ -264,6 +336,11 @@
             this.Name = "CardForm";
             this.Text = "Ремонтна карта";
             ((System.ComponentModel.ISupportInitialize)(this.partsGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numberPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateInPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeePictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.descriptionPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,5 +367,11 @@
         private System.Windows.Forms.DataGridView partsGridView;
         private System.Windows.Forms.Button addPartButton;
         private System.Windows.Forms.Button removePartButton;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.PictureBox numberPictureBox;
+        private System.Windows.Forms.PictureBox dateInPictureBox;
+        private System.Windows.Forms.PictureBox carPictureBox;
+        private System.Windows.Forms.PictureBox employeePictureBox;
+        private System.Windows.Forms.PictureBox descriptionPictureBox;
     }
 }

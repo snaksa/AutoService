@@ -28,10 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BrandForm));
             this.label = new System.Windows.Forms.Label();
             this.brandTextBox = new System.Windows.Forms.TextBox();
             this.BrandAddButton = new System.Windows.Forms.Button();
+            this.namePictureBox = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.namePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // label
@@ -61,18 +65,31 @@
             this.BrandAddButton.UseVisualStyleBackColor = true;
             this.BrandAddButton.Click += new System.EventHandler(this.BrandAddButton_Click);
             // 
+            // namePictureBox
+            // 
+            this.namePictureBox.Image = global::AutoService.Properties.Resources.repair;
+            this.namePictureBox.Location = new System.Drawing.Point(185, 13);
+            this.namePictureBox.Name = "namePictureBox";
+            this.namePictureBox.Size = new System.Drawing.Size(23, 19);
+            this.namePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.namePictureBox.TabIndex = 5;
+            this.namePictureBox.TabStop = false;
+            this.namePictureBox.MouseHover += new System.EventHandler(this.namePictureBox_MouseHover);
+            // 
             // BrandForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Maroon;
-            this.ClientSize = new System.Drawing.Size(210, 80);
+            this.ClientSize = new System.Drawing.Size(220, 80);
+            this.Controls.Add(this.namePictureBox);
             this.Controls.Add(this.BrandAddButton);
             this.Controls.Add(this.label);
             this.Controls.Add(this.brandTextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BrandForm";
             this.Text = "Марка";
+            ((System.ComponentModel.ISupportInitialize)(this.namePictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -83,5 +100,7 @@
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.TextBox brandTextBox;
         private System.Windows.Forms.Button BrandAddButton;
+        private System.Windows.Forms.PictureBox namePictureBox;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

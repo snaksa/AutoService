@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CarForm));
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -57,18 +58,41 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.descriptionTextbox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.engineVolumeTextbox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.frameTextbox = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.engineTextbox = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.regTextbox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.brandPicturebox = new System.Windows.Forms.PictureBox();
+            this.modelPictureBox = new System.Windows.Forms.PictureBox();
+            this.yearPictureBox = new System.Windows.Forms.PictureBox();
+            this.colorPictureBox = new System.Windows.Forms.PictureBox();
+            this.ownerPictureBox = new System.Windows.Forms.PictureBox();
+            this.phonePictureBox = new System.Windows.Forms.PictureBox();
+            this.regPictureBox = new System.Windows.Forms.PictureBox();
+            this.enginePictureBox = new System.Windows.Forms.PictureBox();
+            this.ramaPictureBox = new System.Windows.Forms.PictureBox();
+            this.engineVolumePictureBox = new System.Windows.Forms.PictureBox();
+            this.descriptionPictureBox = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.brandPicturebox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modelPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yearPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.colorPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ownerPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phonePictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.regPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enginePictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ramaPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.engineVolumePictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.descriptionPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // label10
@@ -188,6 +212,10 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.colorPictureBox);
+            this.groupBox1.Controls.Add(this.yearPictureBox);
+            this.groupBox1.Controls.Add(this.modelPictureBox);
+            this.groupBox1.Controls.Add(this.brandPicturebox);
             this.groupBox1.Controls.Add(this.colorDropdown);
             this.groupBox1.Controls.Add(this.modelDropdown);
             this.groupBox1.Controls.Add(this.brandDropdown);
@@ -295,6 +323,8 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.phonePictureBox);
+            this.groupBox2.Controls.Add(this.ownerPictureBox);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.phoneErrorLabel);
@@ -311,6 +341,11 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox3.Controls.Add(this.descriptionPictureBox);
+            this.groupBox3.Controls.Add(this.engineVolumePictureBox);
+            this.groupBox3.Controls.Add(this.ramaPictureBox);
+            this.groupBox3.Controls.Add(this.enginePictureBox);
+            this.groupBox3.Controls.Add(this.regPictureBox);
             this.groupBox3.Controls.Add(this.descriptionTextbox);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.engineVolumeTextbox);
@@ -335,12 +370,32 @@
             this.descriptionTextbox.Size = new System.Drawing.Size(100, 20);
             this.descriptionTextbox.TabIndex = 46;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(6, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(34, 13);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "ДРН:";
+            // 
             // engineVolumeTextbox
             // 
             this.engineVolumeTextbox.Location = new System.Drawing.Point(85, 103);
             this.engineVolumeTextbox.Name = "engineVolumeTextbox";
             this.engineVolumeTextbox.Size = new System.Drawing.Size(100, 20);
             this.engineVolumeTextbox.TabIndex = 45;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Location = new System.Drawing.Point(6, 49);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(73, 13);
+            this.label5.TabIndex = 38;
+            this.label5.Text = "Двигател N: ";
             // 
             // frameTextbox
             // 
@@ -349,12 +404,31 @@
             this.frameTextbox.Size = new System.Drawing.Size(100, 20);
             this.frameTextbox.TabIndex = 44;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Location = new System.Drawing.Point(6, 75);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(48, 13);
+            this.label6.TabIndex = 39;
+            this.label6.Text = "Рама N:";
+            // 
             // engineTextbox
             // 
             this.engineTextbox.Location = new System.Drawing.Point(85, 46);
             this.engineTextbox.Name = "engineTextbox";
             this.engineTextbox.Size = new System.Drawing.Size(100, 20);
             this.engineTextbox.TabIndex = 43;
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Location = new System.Drawing.Point(8, 103);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(73, 32);
+            this.label8.TabIndex = 40;
+            this.label8.Text = "Обем на двигателя:";
             // 
             // regTextbox
             // 
@@ -373,44 +447,126 @@
             this.label9.TabIndex = 41;
             this.label9.Text = "Описание:";
             // 
-            // label8
+            // brandPicturebox
             // 
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Location = new System.Drawing.Point(8, 103);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(73, 32);
-            this.label8.TabIndex = 40;
-            this.label8.Text = "Обем на двигателя:";
+            this.brandPicturebox.Image = global::AutoService.Properties.Resources.repair;
+            this.brandPicturebox.Location = new System.Drawing.Point(192, 29);
+            this.brandPicturebox.Name = "brandPicturebox";
+            this.brandPicturebox.Size = new System.Drawing.Size(17, 21);
+            this.brandPicturebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.brandPicturebox.TabIndex = 47;
+            this.brandPicturebox.TabStop = false;
+            this.brandPicturebox.MouseHover += new System.EventHandler(this.brandPictureBox_MouseHover);
             // 
-            // label6
+            // modelPictureBox
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(6, 75);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 13);
-            this.label6.TabIndex = 39;
-            this.label6.Text = "Рама N:";
+            this.modelPictureBox.Image = global::AutoService.Properties.Resources.repair;
+            this.modelPictureBox.Location = new System.Drawing.Point(189, 51);
+            this.modelPictureBox.Name = "modelPictureBox";
+            this.modelPictureBox.Size = new System.Drawing.Size(17, 21);
+            this.modelPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.modelPictureBox.TabIndex = 48;
+            this.modelPictureBox.TabStop = false;
+            this.modelPictureBox.MouseHover += new System.EventHandler(this.modelPictureBox_MouseHover);
             // 
-            // label5
+            // yearPictureBox
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(6, 49);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 13);
-            this.label5.TabIndex = 38;
-            this.label5.Text = "Двигател N: ";
+            this.yearPictureBox.Image = global::AutoService.Properties.Resources.repair;
+            this.yearPictureBox.Location = new System.Drawing.Point(191, 78);
+            this.yearPictureBox.Name = "yearPictureBox";
+            this.yearPictureBox.Size = new System.Drawing.Size(17, 21);
+            this.yearPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.yearPictureBox.TabIndex = 49;
+            this.yearPictureBox.TabStop = false;
+            this.yearPictureBox.MouseHover += new System.EventHandler(this.yearPictureBox_MouseHover);
             // 
-            // label1
+            // colorPictureBox
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(6, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 13);
-            this.label1.TabIndex = 37;
-            this.label1.Text = "ДРН:";
+            this.colorPictureBox.Image = global::AutoService.Properties.Resources.repair;
+            this.colorPictureBox.Location = new System.Drawing.Point(189, 122);
+            this.colorPictureBox.Name = "colorPictureBox";
+            this.colorPictureBox.Size = new System.Drawing.Size(17, 21);
+            this.colorPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.colorPictureBox.TabIndex = 50;
+            this.colorPictureBox.TabStop = false;
+            this.colorPictureBox.MouseHover += new System.EventHandler(this.colorPictureBox_MouseHover);
+            // 
+            // ownerPictureBox
+            // 
+            this.ownerPictureBox.Image = global::AutoService.Properties.Resources.repair;
+            this.ownerPictureBox.Location = new System.Drawing.Point(191, 35);
+            this.ownerPictureBox.Name = "ownerPictureBox";
+            this.ownerPictureBox.Size = new System.Drawing.Size(17, 21);
+            this.ownerPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ownerPictureBox.TabIndex = 51;
+            this.ownerPictureBox.TabStop = false;
+            this.ownerPictureBox.MouseHover += new System.EventHandler(this.ownerPictureBox_MouseHover);
+            // 
+            // phonePictureBox
+            // 
+            this.phonePictureBox.Image = global::AutoService.Properties.Resources.repair;
+            this.phonePictureBox.Location = new System.Drawing.Point(189, 62);
+            this.phonePictureBox.Name = "phonePictureBox";
+            this.phonePictureBox.Size = new System.Drawing.Size(17, 21);
+            this.phonePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.phonePictureBox.TabIndex = 52;
+            this.phonePictureBox.TabStop = false;
+            this.phonePictureBox.MouseHover += new System.EventHandler(this.phonePictureBox_MouseHover);
+            // 
+            // regPictureBox
+            // 
+            this.regPictureBox.Image = global::AutoService.Properties.Resources.repair;
+            this.regPictureBox.Location = new System.Drawing.Point(187, 23);
+            this.regPictureBox.Name = "regPictureBox";
+            this.regPictureBox.Size = new System.Drawing.Size(17, 21);
+            this.regPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.regPictureBox.TabIndex = 53;
+            this.regPictureBox.TabStop = false;
+            this.regPictureBox.MouseHover += new System.EventHandler(this.regPictureBox_MouseHover);
+            // 
+            // enginePictureBox
+            // 
+            this.enginePictureBox.Image = global::AutoService.Properties.Resources.repair;
+            this.enginePictureBox.Location = new System.Drawing.Point(187, 49);
+            this.enginePictureBox.Name = "enginePictureBox";
+            this.enginePictureBox.Size = new System.Drawing.Size(17, 21);
+            this.enginePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.enginePictureBox.TabIndex = 54;
+            this.enginePictureBox.TabStop = false;
+            this.enginePictureBox.MouseHover += new System.EventHandler(this.enginePictureBox_MouseHover);
+            // 
+            // ramaPictureBox
+            // 
+            this.ramaPictureBox.Image = global::AutoService.Properties.Resources.repair;
+            this.ramaPictureBox.Location = new System.Drawing.Point(187, 75);
+            this.ramaPictureBox.Name = "ramaPictureBox";
+            this.ramaPictureBox.Size = new System.Drawing.Size(17, 21);
+            this.ramaPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ramaPictureBox.TabIndex = 55;
+            this.ramaPictureBox.TabStop = false;
+            this.ramaPictureBox.MouseHover += new System.EventHandler(this.ramaPictureBox_MouseHover);
+            // 
+            // engineVolumePictureBox
+            // 
+            this.engineVolumePictureBox.Image = global::AutoService.Properties.Resources.repair;
+            this.engineVolumePictureBox.Location = new System.Drawing.Point(191, 102);
+            this.engineVolumePictureBox.Name = "engineVolumePictureBox";
+            this.engineVolumePictureBox.Size = new System.Drawing.Size(17, 21);
+            this.engineVolumePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.engineVolumePictureBox.TabIndex = 56;
+            this.engineVolumePictureBox.TabStop = false;
+            this.engineVolumePictureBox.MouseHover += new System.EventHandler(this.engineVolumePictureBox_MouseHover);
+            // 
+            // descriptionPictureBox
+            // 
+            this.descriptionPictureBox.Image = global::AutoService.Properties.Resources.repair;
+            this.descriptionPictureBox.Location = new System.Drawing.Point(191, 129);
+            this.descriptionPictureBox.Name = "descriptionPictureBox";
+            this.descriptionPictureBox.Size = new System.Drawing.Size(17, 21);
+            this.descriptionPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.descriptionPictureBox.TabIndex = 57;
+            this.descriptionPictureBox.TabStop = false;
+            this.descriptionPictureBox.MouseHover += new System.EventHandler(this.descriptionPictureBox_MouseHover);
             // 
             // CarForm
             // 
@@ -439,6 +595,17 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.brandPicturebox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modelPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yearPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.colorPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ownerPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phonePictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.regPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enginePictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ramaPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.engineVolumePictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.descriptionPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -482,5 +649,17 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox regTextbox;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.PictureBox brandPicturebox;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.PictureBox colorPictureBox;
+        private System.Windows.Forms.PictureBox yearPictureBox;
+        private System.Windows.Forms.PictureBox modelPictureBox;
+        private System.Windows.Forms.PictureBox phonePictureBox;
+        private System.Windows.Forms.PictureBox ownerPictureBox;
+        private System.Windows.Forms.PictureBox descriptionPictureBox;
+        private System.Windows.Forms.PictureBox engineVolumePictureBox;
+        private System.Windows.Forms.PictureBox ramaPictureBox;
+        private System.Windows.Forms.PictureBox enginePictureBox;
+        private System.Windows.Forms.PictureBox regPictureBox;
     }
 }

@@ -28,11 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeeForm));
             this.label1 = new System.Windows.Forms.Label();
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.saveButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.namePictureBox = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.namePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -69,12 +73,24 @@
             this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 3;
             // 
+            // namePictureBox
+            // 
+            this.namePictureBox.Image = global::AutoService.Properties.Resources.repair;
+            this.namePictureBox.Location = new System.Drawing.Point(149, 12);
+            this.namePictureBox.Name = "namePictureBox";
+            this.namePictureBox.Size = new System.Drawing.Size(21, 19);
+            this.namePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.namePictureBox.TabIndex = 4;
+            this.namePictureBox.TabStop = false;
+            this.namePictureBox.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
+            // 
             // EmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(196, 84);
+            this.Controls.Add(this.namePictureBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.nameTextBox);
@@ -82,6 +98,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EmployeeForm";
             this.Text = "Служител";
+            ((System.ComponentModel.ISupportInitialize)(this.namePictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -93,5 +110,7 @@
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox namePictureBox;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

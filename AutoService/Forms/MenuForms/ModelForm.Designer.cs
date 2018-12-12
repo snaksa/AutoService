@@ -28,12 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModelForm));
             this.ModelAddButton = new System.Windows.Forms.Button();
             this.label = new System.Windows.Forms.Label();
             this.modelTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.brandsDropdown = new System.Windows.Forms.ComboBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // ModelAddButton
@@ -76,10 +83,41 @@
             // 
             this.brandsDropdown.FormattingEnabled = true;
             this.brandsDropdown.Location = new System.Drawing.Point(81, 41);
-            this.brandsDropdown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.brandsDropdown.Margin = new System.Windows.Forms.Padding(2);
             this.brandsDropdown.Name = "brandsDropdown";
             this.brandsDropdown.Size = new System.Drawing.Size(100, 21);
             this.brandsDropdown.TabIndex = 9;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "label2";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::AutoService.Properties.Resources.repair;
+            this.pictureBox1.Location = new System.Drawing.Point(188, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(21, 21);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::AutoService.Properties.Resources.repair;
+            this.pictureBox2.Location = new System.Drawing.Point(186, 43);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(21, 21);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
             // 
             // ModelForm
             // 
@@ -87,6 +125,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Bisque;
             this.ClientSize = new System.Drawing.Size(230, 120);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.brandsDropdown);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ModelAddButton);
@@ -95,6 +136,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ModelForm";
             this.Text = "Модел";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -107,5 +150,9 @@
         private System.Windows.Forms.TextBox modelTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox brandsDropdown;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

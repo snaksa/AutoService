@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PartForm));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,6 +40,13 @@
             this.nomerErrorLabel = new System.Windows.Forms.Label();
             this.nameErrorLabel = new System.Windows.Forms.Label();
             this.priceErrorLabel = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.numberPictureBox = new System.Windows.Forms.PictureBox();
+            this.namePictureBox = new System.Windows.Forms.PictureBox();
+            this.pricePictureBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.numberPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.namePictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pricePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -123,12 +131,48 @@
             this.priceErrorLabel.Size = new System.Drawing.Size(0, 13);
             this.priceErrorLabel.TabIndex = 9;
             // 
+            // numberPictureBox
+            // 
+            this.numberPictureBox.Image = global::AutoService.Properties.Resources.repair;
+            this.numberPictureBox.Location = new System.Drawing.Point(166, 12);
+            this.numberPictureBox.Name = "numberPictureBox";
+            this.numberPictureBox.Size = new System.Drawing.Size(19, 18);
+            this.numberPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.numberPictureBox.TabIndex = 10;
+            this.numberPictureBox.TabStop = false;
+            this.numberPictureBox.MouseHover += new System.EventHandler(this.numberPictureBox_MouseHover);
+            // 
+            // namePictureBox
+            // 
+            this.namePictureBox.Image = global::AutoService.Properties.Resources.repair;
+            this.namePictureBox.Location = new System.Drawing.Point(166, 39);
+            this.namePictureBox.Name = "namePictureBox";
+            this.namePictureBox.Size = new System.Drawing.Size(19, 18);
+            this.namePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.namePictureBox.TabIndex = 11;
+            this.namePictureBox.TabStop = false;
+            this.namePictureBox.MouseHover += new System.EventHandler(this.namePictureBox_MouseHover);
+            // 
+            // pricePictureBox
+            // 
+            this.pricePictureBox.Image = global::AutoService.Properties.Resources.repair;
+            this.pricePictureBox.Location = new System.Drawing.Point(166, 66);
+            this.pricePictureBox.Name = "pricePictureBox";
+            this.pricePictureBox.Size = new System.Drawing.Size(19, 18);
+            this.pricePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pricePictureBox.TabIndex = 12;
+            this.pricePictureBox.TabStop = false;
+            this.pricePictureBox.MouseHover += new System.EventHandler(this.pricePictureBox_MouseHover);
+            // 
             // PartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(188, 143);
+            this.ClientSize = new System.Drawing.Size(197, 143);
+            this.Controls.Add(this.pricePictureBox);
+            this.Controls.Add(this.namePictureBox);
+            this.Controls.Add(this.numberPictureBox);
             this.Controls.Add(this.priceErrorLabel);
             this.Controls.Add(this.nameErrorLabel);
             this.Controls.Add(this.nomerErrorLabel);
@@ -142,6 +186,9 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PartForm";
             this.Text = "Части";
+            ((System.ComponentModel.ISupportInitialize)(this.numberPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.namePictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pricePictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -159,5 +206,9 @@
         private System.Windows.Forms.Label nomerErrorLabel;
         private System.Windows.Forms.Label nameErrorLabel;
         private System.Windows.Forms.Label priceErrorLabel;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.PictureBox numberPictureBox;
+        private System.Windows.Forms.PictureBox namePictureBox;
+        private System.Windows.Forms.PictureBox pricePictureBox;
     }
 }

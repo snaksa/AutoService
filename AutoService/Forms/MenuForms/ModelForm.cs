@@ -20,6 +20,9 @@ namespace AutoService.Forms.MenuForms
         {
             InitializeComponent();
 
+            pictureBox1.Visible = false;
+            pictureBox2.Visible = false;
+
             brands = BrandRepository.GetAll();
             foreach (Brand b in brands)
                 brandsDropdown.Items.Add(b.Name);
@@ -38,6 +41,20 @@ namespace AutoService.Forms.MenuForms
         }
         private void ModelAddButton_Click(object sender, System.EventArgs e)
         {
+            pictureBox1.Visible = false;
+            pictureBox2.Visible = false;
+            bool error = false;
+            if (modelTextBox.Text.Length == 0) {
+                pictureBox1.Visible = true;
+                error = true;
+            }
+            if (brandsDropdown.SelectedIndex == -1) {
+                pictureBox2.Visible = true;
+                error = true;
+            }
+
+            if (error) return;
+
             string name = modelTextBox.Text;
             Brand b = this.brands[brandsDropdown.SelectedIndex];
 
@@ -46,5 +63,14 @@ namespace AutoService.Forms.MenuForms
 
             this.Close();
         }
+
+        private void pictureBox1_MouseHover(object sender, EventArgs e) {
+            toolTip1.SetToolTip(pictureBox1, "Въвдете име!");
+        }
+
+        private void pictureBox2_MouseHover(object sender, EventArgs e) {
+            toolTip1.SetToolTip(pictureBox2, "Изберете марка!");
+        }
+
     }
 }

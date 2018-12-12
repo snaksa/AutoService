@@ -18,6 +18,11 @@ namespace AutoService.Forms.PartForms
         public PartForm(int id = 0)
         {
             InitializeComponent();
+
+            numberPictureBox.Visible = false;
+            namePictureBox.Visible = false;
+            pricePictureBox.Visible = false;
+
             SpareParts part = null;
             if (id != 0)
             {
@@ -34,6 +39,25 @@ namespace AutoService.Forms.PartForms
         }
         private void saveButton_Click(object sender, EventArgs e)
         {
+            numberPictureBox.Visible = false;
+            namePictureBox.Visible = false;
+            pricePictureBox.Visible = false;
+            bool error = false;
+            if (nameTextBox.Text.Length == 0) {
+                namePictureBox.Visible = true;
+                error = true;
+            }
+            if (numberTextBox.Text.Length == 0) {
+                numberPictureBox.Visible = true;
+                error = true;
+            }
+            if (priceTextBox.Text.Length == 0) {
+                pricePictureBox.Visible = true;
+                error = true;
+            }
+
+            if (error) return;
+
             SpareParts p = new SpareParts(this.id, nameTextBox.Text, numberTextBox.Text, Double.Parse(priceTextBox.Text, CultureInfo.InvariantCulture));
 
             if (p.Id == 0) PartRepository.Add(p);
@@ -41,5 +65,18 @@ namespace AutoService.Forms.PartForms
 
             this.Close();
         }
+
+        private void numberPictureBox_MouseHover(object sender, EventArgs e) {
+            toolTip1.SetToolTip(numberPictureBox, "Въведете номер!");
+        }
+
+        private void namePictureBox_MouseHover(object sender, EventArgs e) {
+            toolTip1.SetToolTip(namePictureBox, "Въведете име!");
+        }
+
+        private void pricePictureBox_MouseHover(object sender, EventArgs e) {
+            toolTip1.SetToolTip(pricePictureBox, "Въвдете цена!");
+        }
+
     }
 }

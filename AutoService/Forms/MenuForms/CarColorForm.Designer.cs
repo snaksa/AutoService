@@ -28,10 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CarColorForm));
             this.CarColorAddButton = new System.Windows.Forms.Button();
             this.label = new System.Windows.Forms.Label();
             this.carcolorTextBox = new System.Windows.Forms.TextBox();
+            this.namePictureBox = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.namePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // CarColorAddButton
@@ -60,18 +64,31 @@
             this.carcolorTextBox.Size = new System.Drawing.Size(100, 20);
             this.carcolorTextBox.TabIndex = 8;
             // 
+            // namePictureBox
+            // 
+            this.namePictureBox.Image = global::AutoService.Properties.Resources.repair;
+            this.namePictureBox.Location = new System.Drawing.Point(160, 16);
+            this.namePictureBox.Name = "namePictureBox";
+            this.namePictureBox.Size = new System.Drawing.Size(28, 20);
+            this.namePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.namePictureBox.TabIndex = 11;
+            this.namePictureBox.TabStop = false;
+            this.namePictureBox.MouseHover += new System.EventHandler(this.namePictureBox_MouseHover);
+            // 
             // CarColorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleGreen;
-            this.ClientSize = new System.Drawing.Size(196, 81);
+            this.ClientSize = new System.Drawing.Size(200, 81);
+            this.Controls.Add(this.namePictureBox);
             this.Controls.Add(this.CarColorAddButton);
             this.Controls.Add(this.label);
             this.Controls.Add(this.carcolorTextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CarColorForm";
             this.Text = "Цвят:";
+            ((System.ComponentModel.ISupportInitialize)(this.namePictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -82,5 +99,7 @@
         private System.Windows.Forms.Button CarColorAddButton;
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.TextBox carcolorTextBox;
+        private System.Windows.Forms.PictureBox namePictureBox;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

@@ -10,7 +10,9 @@ namespace AutoService.Forms.EmloyeeForms
         public EmployeeForm(int id = 0)
         {
             InitializeComponent();
-            
+
+            namePictureBox.Visible = false;
+
             if(id != 0)
             {
                 this.id = id;
@@ -21,12 +23,21 @@ namespace AutoService.Forms.EmloyeeForms
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
+            namePictureBox.Visible = false;
+            if (nameTextBox.Text.Length <= 0) {
+                namePictureBox.Visible = true;
+                return;
+            }
             string name = nameTextBox.Text;
 
             if (this.id != 0) EmployeeRepository.Update(this.id, name);
             else EmployeeRepository.Add(name);
 
             this.Close();
+        }
+
+        private void pictureBox1_MouseHover(object sender, EventArgs e) {
+            toolTip1.SetToolTip(namePictureBox, "Въвдете име!");
         }
     }
 }

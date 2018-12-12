@@ -23,6 +23,9 @@ namespace AutoService.Forms.CardForms
         public CardForm(int id = 0)
         {
             InitializeComponent();
+
+            this.hideErrors();
+
             RepairCard card = null;
 
             cars = CarRepository.GetAll();
@@ -63,10 +66,37 @@ namespace AutoService.Forms.CardForms
                 partsGridView.Visible = false;
                 addPartButton.Visible = false;
                 removePartButton.Visible = false;
+                this.Height = 320;
             }
         }
+
         private void saveButton_Click(object sender, EventArgs e)
         {
+            this.hideErrors();
+            bool error = false;
+            if (numberTextbox.Text.Length <= 0) {
+                numberPictureBox.Visible = true;
+                error = true;
+            }
+            if (dateInDatetime.Value == null) {
+                dateInPictureBox.Visible = true;
+                error = true;
+            }
+            if (carDropdown.SelectedIndex == -1) {
+                carPictureBox.Visible = true;
+                error = true;
+            }
+            if (employeeDropdown.SelectedIndex == -1) {
+                employeePictureBox.Visible = true;
+                error = true;
+            }
+            if (descriptionTextbox.Text.Length <= 0) {
+                descriptionPictureBox.Visible = true;
+                error = true;
+            }
+
+            if (error) return;
+
             DateTime? dateOut = null;
             if (dateOutDatetime.Format != DateTimePickerFormat.Custom)
             {
@@ -130,6 +160,34 @@ namespace AutoService.Forms.CardForms
         private void dateOutDatetime_ValueChanged(object sender, EventArgs e)
         {
             dateOutDatetime.Format = DateTimePickerFormat.Long;
+        }
+
+        private void numberPictureBox_MouseHover(object sender, EventArgs e) {
+            toolTip1.SetToolTip(numberPictureBox, "Въведете номер!");
+        }
+
+        private void dateInPictureBox_MouseHover(object sender, EventArgs e) {
+            toolTip1.SetToolTip(dateInPictureBox, "Въведете дата!");
+        }
+
+        private void carPictureBox_MouseHover(object sender, EventArgs e) {
+            toolTip1.SetToolTip(carPictureBox, "Изберете кола!");
+        }
+
+        private void employeePictureBox_MouseHover(object sender, EventArgs e) {
+            toolTip1.SetToolTip(employeePictureBox, "Изберете служител!");
+        }
+
+        private void descriptionPictureBox_MouseHover(object sender, EventArgs e) {
+            toolTip1.SetToolTip(descriptionPictureBox, "Въведете описание!");
+        }
+
+        private void hideErrors() {
+            numberPictureBox.Visible = false;
+            dateInPictureBox.Visible = false;
+            carPictureBox.Visible = false;
+            employeePictureBox.Visible = false;
+            descriptionPictureBox.Visible = false;
         }
     }
 }

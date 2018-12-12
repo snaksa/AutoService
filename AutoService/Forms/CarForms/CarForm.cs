@@ -21,6 +21,9 @@ namespace AutoService.Forms
         public CarForm(int id = 0)
         {
             InitializeComponent();
+
+            this.hideErrors();
+
             Car car = null;
             if (id != 0)
             {
@@ -70,6 +73,56 @@ namespace AutoService.Forms
 
         private void CarSave_Click(object sender, EventArgs e)
         {
+            this.hideErrors();
+            bool error = false;
+            int result;
+            if (regTextbox.Text.Length <= 0) {
+                regPictureBox.Visible = true;
+                error = true;
+            }
+            if (engineTextbox.Text.Length <= 0) {
+                enginePictureBox.Visible = true;
+                error = true;
+            }
+            if (engineVolumeTextbox.Text.Length <= 0) {
+                engineVolumePictureBox.Visible = true;
+                error = true;
+            }
+            if (yearTextbox.Text.Length <= 0 && !Int32.TryParse(yearTextbox.Text, out result)) {
+                yearPictureBox.Visible = true;
+                error = true;
+            }
+            if (descriptionTextbox.Text.Length <= 0) {
+                descriptionPictureBox.Visible = true;
+                error = true;
+            }
+            if (ownerTextbox.Text.Length <= 0) {
+                ownerPictureBox.Visible = true;
+                error = true;
+            }
+            if (phoneTextbox.Text.Length <= 0) {
+                phonePictureBox.Visible = true;
+                error = true;
+            }
+            if (frameTextbox.Text.Length <= 0) {
+                ramaPictureBox.Visible = true;
+                error = true;
+            }
+            if (modelDropdown.SelectedIndex == -1) {
+                modelPictureBox.Visible = true;
+                error = true;
+            }
+            if (brandDropdown.SelectedIndex == -1) {
+                brandPicturebox.Visible = true;
+                error = true;
+            }
+            if (colorDropdown.SelectedIndex == -1) {
+                colorPictureBox.Visible = true;
+                error = true;
+            }
+
+            if(error) return;
+
             Car c = new Car(this.id, regTextbox.Text, this.models[modelDropdown.SelectedIndex], Int32.Parse(yearTextbox.Text), engineTextbox.Text, frameTextbox.Text,
                 this.colors[colorDropdown.SelectedIndex], engineVolumeTextbox.Text, descriptionTextbox.Text, ownerTextbox.Text, phoneTextbox.Text);
 
@@ -89,5 +142,65 @@ namespace AutoService.Forms
             modelDropdown.Text = this.models.Count > 0 ? this.models[0].Name : "";
             modelDropdown.Enabled = true;
         }
+
+
+        private void brandPictureBox_MouseHover(object sender, EventArgs e) {
+            toolTip1.SetToolTip(brandPicturebox, "Изберете марка!");
+        }
+
+        private void modelPictureBox_MouseHover(object sender, EventArgs e) {
+            toolTip1.SetToolTip(modelPictureBox, "Изберете модел!");
+        }
+
+        private void yearPictureBox_MouseHover(object sender, EventArgs e) {
+            toolTip1.SetToolTip(yearPictureBox, "Въвдете година!");
+        }
+
+        private void colorPictureBox_MouseHover(object sender, EventArgs e) {
+            toolTip1.SetToolTip(colorPictureBox, "Изберете цвят!");
+        }
+
+        private void ownerPictureBox_MouseHover(object sender, EventArgs e) {
+            toolTip1.SetToolTip(ownerPictureBox, "Въвдете собственик!");
+        }
+
+        private void phonePictureBox_MouseHover(object sender, EventArgs e) {
+            toolTip1.SetToolTip(phonePictureBox, "Въвдете телефон!");
+        }
+
+        private void regPictureBox_MouseHover(object sender, EventArgs e) {
+            toolTip1.SetToolTip(regPictureBox, "Въвдете номер!");
+        }
+
+        private void enginePictureBox_MouseHover(object sender, EventArgs e) {
+            toolTip1.SetToolTip(enginePictureBox, "Въвдете двигател!");
+        }
+
+        private void ramaPictureBox_MouseHover(object sender, EventArgs e) {
+            toolTip1.SetToolTip(ramaPictureBox, "Въвдете рама!");
+        }
+
+        private void engineVolumePictureBox_MouseHover(object sender, EventArgs e) {
+            toolTip1.SetToolTip(engineVolumePictureBox, "Въвдете обем!");
+        }
+
+        private void descriptionPictureBox_MouseHover(object sender, EventArgs e) {
+            toolTip1.SetToolTip(descriptionPictureBox, "Въвдете описание!");
+        }
+
+        private void hideErrors() {
+            modelPictureBox.Visible = false;
+            brandPicturebox.Visible = false;
+            yearPictureBox.Visible = false;
+            colorPictureBox.Visible = false;
+            ownerPictureBox.Visible = false;
+            phonePictureBox.Visible = false;
+            regPictureBox.Visible = false;
+            enginePictureBox.Visible = false;
+            ramaPictureBox.Visible = false;
+            engineVolumePictureBox.Visible = false;
+            descriptionPictureBox.Visible = false;
+        }
+
     }
 }
