@@ -84,7 +84,7 @@
             this.carsDataGridView.RowTemplate.Height = 24;
             this.carsDataGridView.RowTemplate.ReadOnly = true;
             this.carsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.carsDataGridView.Size = new System.Drawing.Size(1636, 428);
+            this.carsDataGridView.Size = new System.Drawing.Size(1523, 428);
             this.carsDataGridView.TabIndex = 2;
             // 
             // editCarButton
@@ -103,7 +103,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::AutoService.Properties.Resources.carFormBackGround;
-            this.ClientSize = new System.Drawing.Size(1664, 476);
+            this.ClientSize = new System.Drawing.Size(1786, 476);
             this.Controls.Add(this.editCarButton);
             this.Controls.Add(this.carsDataGridView);
             this.Controls.Add(this.CarRmv);
