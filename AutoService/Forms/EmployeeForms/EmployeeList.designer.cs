@@ -39,7 +39,7 @@
             // deleteButton
             // 
             this.deleteButton.BackColor = System.Drawing.Color.Transparent;
-            this.deleteButton.Location = new System.Drawing.Point(171, 9);
+            this.deleteButton.Location = new System.Drawing.Point(177, 9);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(75, 23);
             this.deleteButton.TabIndex = 1;
@@ -77,13 +77,13 @@
             this.employeesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.employeesGrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.employeesGrid.Location = new System.Drawing.Point(9, 37);
-            this.employeesGrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.employeesGrid.Margin = new System.Windows.Forms.Padding(2);
             this.employeesGrid.MultiSelect = false;
             this.employeesGrid.Name = "employeesGrid";
             this.employeesGrid.ReadOnly = true;
             this.employeesGrid.RowTemplate.Height = 24;
             this.employeesGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.employeesGrid.Size = new System.Drawing.Size(237, 185);
+            this.employeesGrid.Size = new System.Drawing.Size(243, 185);
             this.employeesGrid.TabIndex = 4;
             // 
             // EmployeeList
@@ -91,7 +91,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(259, 222);
+            this.ClientSize = new System.Drawing.Size(263, 222);
             this.Controls.Add(this.employeesGrid);
             this.Controls.Add(this.newButton);
             this.Controls.Add(this.editButton);

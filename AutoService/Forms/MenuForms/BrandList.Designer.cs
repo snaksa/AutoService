@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BrandList));
             this.BrandAdd = new System.Windows.Forms.Button();
             this.BrandEdit = new System.Windows.Forms.Button();
             this.BrandDelete = new System.Windows.Forms.Button();
@@ -67,23 +68,31 @@
             // 
             // brandGridView
             // 
+            this.brandGridView.AllowUserToAddRows = false;
+            this.brandGridView.AllowUserToDeleteRows = false;
+            this.brandGridView.BackgroundColor = System.Drawing.Color.Maroon;
             this.brandGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.brandGridView.Location = new System.Drawing.Point(12, 121);
+            this.brandGridView.Location = new System.Drawing.Point(12, 114);
+            this.brandGridView.MultiSelect = false;
             this.brandGridView.Name = "brandGridView";
-            this.brandGridView.Size = new System.Drawing.Size(240, 150);
+            this.brandGridView.ReadOnly = true;
+            this.brandGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.brandGridView.Size = new System.Drawing.Size(263, 150);
             this.brandGridView.TabIndex = 5;
             // 
-            // MenuBrandForm
+            // BrandList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(293, 290);
+            this.BackColor = System.Drawing.Color.Maroon;
+            this.ClientSize = new System.Drawing.Size(277, 276);
             this.Controls.Add(this.brandGridView);
             this.Controls.Add(this.BrandDelete);
             this.Controls.Add(this.BrandEdit);
             this.Controls.Add(this.BrandAdd);
-            this.Name = "MenuBrandForm";
-            this.Text = "MenuBrandForm";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "BrandList";
+            this.Text = "Марка";
             ((System.ComponentModel.ISupportInitialize)(this.brandGridView)).EndInit();
             this.ResumeLayout(false);
 

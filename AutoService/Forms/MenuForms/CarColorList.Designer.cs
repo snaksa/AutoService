@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CarColorList));
             this.carcolorGridView = new System.Windows.Forms.DataGridView();
             this.CarColorDelete = new System.Windows.Forms.Button();
             this.CarColorEdit = new System.Windows.Forms.Button();
@@ -37,19 +38,23 @@
             // 
             // carcolorGridView
             // 
+            this.carcolorGridView.AllowUserToAddRows = false;
+            this.carcolorGridView.AllowUserToDeleteRows = false;
+            this.carcolorGridView.BackgroundColor = System.Drawing.Color.PaleGreen;
             this.carcolorGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.carcolorGridView.Location = new System.Drawing.Point(16, 146);
-            this.carcolorGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.carcolorGridView.Location = new System.Drawing.Point(12, 98);
+            this.carcolorGridView.MultiSelect = false;
             this.carcolorGridView.Name = "carcolorGridView";
-            this.carcolorGridView.Size = new System.Drawing.Size(320, 185);
+            this.carcolorGridView.ReadOnly = true;
+            this.carcolorGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.carcolorGridView.Size = new System.Drawing.Size(263, 167);
             this.carcolorGridView.TabIndex = 13;
             // 
             // CarColorDelete
             // 
-            this.CarColorDelete.Location = new System.Drawing.Point(16, 85);
-            this.CarColorDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CarColorDelete.Location = new System.Drawing.Point(12, 69);
             this.CarColorDelete.Name = "CarColorDelete";
-            this.CarColorDelete.Size = new System.Drawing.Size(179, 28);
+            this.CarColorDelete.Size = new System.Drawing.Size(134, 23);
             this.CarColorDelete.TabIndex = 12;
             this.CarColorDelete.Text = "Изтриване на цвят";
             this.CarColorDelete.UseVisualStyleBackColor = true;
@@ -57,10 +62,9 @@
             // 
             // CarColorEdit
             // 
-            this.CarColorEdit.Location = new System.Drawing.Point(16, 49);
-            this.CarColorEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CarColorEdit.Location = new System.Drawing.Point(12, 40);
             this.CarColorEdit.Name = "CarColorEdit";
-            this.CarColorEdit.Size = new System.Drawing.Size(179, 28);
+            this.CarColorEdit.Size = new System.Drawing.Size(134, 23);
             this.CarColorEdit.TabIndex = 11;
             this.CarColorEdit.Text = "Редактиране на цвят";
             this.CarColorEdit.UseVisualStyleBackColor = true;
@@ -68,10 +72,9 @@
             // 
             // CarColorAdd
             // 
-            this.CarColorAdd.Location = new System.Drawing.Point(16, 14);
-            this.CarColorAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CarColorAdd.Location = new System.Drawing.Point(12, 11);
             this.CarColorAdd.Name = "CarColorAdd";
-            this.CarColorAdd.Size = new System.Drawing.Size(179, 28);
+            this.CarColorAdd.Size = new System.Drawing.Size(134, 23);
             this.CarColorAdd.TabIndex = 10;
             this.CarColorAdd.Text = "Добавяне на цвят";
             this.CarColorAdd.UseVisualStyleBackColor = true;
@@ -79,16 +82,17 @@
             // 
             // CarColorList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(361, 357);
+            this.BackColor = System.Drawing.Color.PaleGreen;
+            this.ClientSize = new System.Drawing.Size(290, 277);
             this.Controls.Add(this.carcolorGridView);
             this.Controls.Add(this.CarColorDelete);
             this.Controls.Add(this.CarColorEdit);
             this.Controls.Add(this.CarColorAdd);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CarColorList";
-            this.Text = "MenuCarColor";
+            this.Text = "Цвят";
             ((System.ComponentModel.ISupportInitialize)(this.carcolorGridView)).EndInit();
             this.ResumeLayout(false);
 

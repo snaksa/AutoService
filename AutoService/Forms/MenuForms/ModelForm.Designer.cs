@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModelForm));
             this.ModelAddButton = new System.Windows.Forms.Button();
             this.label = new System.Windows.Forms.Label();
             this.modelTextBox = new System.Windows.Forms.TextBox();
@@ -37,10 +38,9 @@
             // 
             // ModelAddButton
             // 
-            this.ModelAddButton.Location = new System.Drawing.Point(13, 74);
-            this.ModelAddButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ModelAddButton.Location = new System.Drawing.Point(65, 85);
             this.ModelAddButton.Name = "ModelAddButton";
-            this.ModelAddButton.Size = new System.Drawing.Size(100, 28);
+            this.ModelAddButton.Size = new System.Drawing.Size(75, 23);
             this.ModelAddButton.TabIndex = 7;
             this.ModelAddButton.Text = "Запази";
             this.ModelAddButton.UseVisualStyleBackColor = true;
@@ -49,51 +49,52 @@
             // label
             // 
             this.label.AutoSize = true;
-            this.label.Location = new System.Drawing.Point(15, 9);
-            this.label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label.Location = new System.Drawing.Point(13, 14);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(50, 17);
+            this.label.Size = new System.Drawing.Size(43, 13);
             this.label.TabIndex = 6;
-            this.label.Text = "Model:";
+            this.label.Text = "Модел:";
             // 
             // modelTextBox
             // 
-            this.modelTextBox.Location = new System.Drawing.Point(105, 9);
-            this.modelTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.modelTextBox.Location = new System.Drawing.Point(81, 14);
             this.modelTextBox.Name = "modelTextBox";
-            this.modelTextBox.Size = new System.Drawing.Size(132, 22);
+            this.modelTextBox.Size = new System.Drawing.Size(100, 20);
             this.modelTextBox.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 44);
+            this.label1.Location = new System.Drawing.Point(13, 43);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 17);
+            this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Brand:";
+            this.label1.Text = "Марка:";
             // 
             // brandsDropdown
             // 
             this.brandsDropdown.FormattingEnabled = true;
-            this.brandsDropdown.Location = new System.Drawing.Point(105, 42);
+            this.brandsDropdown.Location = new System.Drawing.Point(81, 41);
+            this.brandsDropdown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.brandsDropdown.Name = "brandsDropdown";
-            this.brandsDropdown.Size = new System.Drawing.Size(132, 24);
+            this.brandsDropdown.Size = new System.Drawing.Size(100, 21);
             this.brandsDropdown.TabIndex = 9;
             // 
             // ModelForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(307, 148);
+            this.BackColor = System.Drawing.Color.Bisque;
+            this.ClientSize = new System.Drawing.Size(230, 120);
             this.Controls.Add(this.brandsDropdown);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ModelAddButton);
             this.Controls.Add(this.label);
             this.Controls.Add(this.modelTextBox);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ModelForm";
-            this.Text = "ModelForm";
+            this.Text = "Модел";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -133,6 +133,9 @@
   <data name="AutoServiceLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AutoServiceLogo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bckgrndRepairCard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bckgrndRepairCard.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="human-resources" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\human-resources.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -142,13 +145,16 @@
   <data name="air-filter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\air-filter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="48364228_267573177259903_5433165283348971520_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\48364228_267573177259903_5433165283348971520_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="repair" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\repair.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="wrench" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wrench.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="48364228_267573177259903_5433165283348971520_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\48364228_267573177259903_5433165283348971520_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="download" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PartForm));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,7 +44,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Location = new System.Drawing.Point(12, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 0;
@@ -52,7 +53,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 41);
+            this.label2.Location = new System.Drawing.Point(15, 40);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(32, 13);
             this.label2.TabIndex = 1;
@@ -61,7 +62,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 67);
+            this.label3.Location = new System.Drawing.Point(12, 66);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(36, 13);
             this.label3.TabIndex = 2;
@@ -69,7 +70,7 @@
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(122, 108);
+            this.saveButton.Location = new System.Drawing.Point(60, 108);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(75, 23);
             this.saveButton.TabIndex = 3;
@@ -79,21 +80,21 @@
             // 
             // numberTextBox
             // 
-            this.numberTextBox.Location = new System.Drawing.Point(61, 11);
+            this.numberTextBox.Location = new System.Drawing.Point(60, 10);
             this.numberTextBox.Name = "numberTextBox";
             this.numberTextBox.Size = new System.Drawing.Size(100, 20);
             this.numberTextBox.TabIndex = 4;
             // 
             // nameTextBox
             // 
-            this.nameTextBox.Location = new System.Drawing.Point(61, 38);
+            this.nameTextBox.Location = new System.Drawing.Point(60, 37);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(100, 20);
             this.nameTextBox.TabIndex = 5;
             // 
             // priceTextBox
             // 
-            this.priceTextBox.Location = new System.Drawing.Point(61, 67);
+            this.priceTextBox.Location = new System.Drawing.Point(60, 66);
             this.priceTextBox.Name = "priceTextBox";
             this.priceTextBox.Size = new System.Drawing.Size(100, 20);
             this.priceTextBox.TabIndex = 6;
@@ -126,7 +127,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(300, 143);
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ClientSize = new System.Drawing.Size(188, 143);
             this.Controls.Add(this.priceErrorLabel);
             this.Controls.Add(this.nameErrorLabel);
             this.Controls.Add(this.nomerErrorLabel);
@@ -137,6 +139,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PartForm";
             this.Text = "Части";
             this.ResumeLayout(false);

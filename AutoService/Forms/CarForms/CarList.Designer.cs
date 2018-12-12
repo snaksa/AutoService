@@ -39,7 +39,7 @@
             // 
             // CarAddButton
             // 
-            this.CarAddButton.Location = new System.Drawing.Point(-2, 2);
+            this.CarAddButton.Location = new System.Drawing.Point(12, 2);
             this.CarAddButton.Name = "CarAddButton";
             this.CarAddButton.Size = new System.Drawing.Size(143, 23);
             this.CarAddButton.TabIndex = 0;
@@ -49,7 +49,7 @@
             // 
             // CarRmv
             // 
-            this.CarRmv.Location = new System.Drawing.Point(147, 2);
+            this.CarRmv.Location = new System.Drawing.Point(161, 2);
             this.CarRmv.Name = "CarRmv";
             this.CarRmv.Size = new System.Drawing.Size(143, 23);
             this.CarRmv.TabIndex = 1;
@@ -61,7 +61,7 @@
             // 
             this.carsDataGridView.AllowUserToAddRows = false;
             this.carsDataGridView.AllowUserToDeleteRows = false;
-            this.carsDataGridView.BackgroundColor = System.Drawing.Color.White;
+            this.carsDataGridView.BackgroundColor = System.Drawing.Color.LightGray;
             this.carsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.carsDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
@@ -87,7 +87,7 @@
             // 
             // editCarButton
             // 
-            this.editCarButton.Location = new System.Drawing.Point(295, 2);
+            this.editCarButton.Location = new System.Drawing.Point(309, 2);
             this.editCarButton.Margin = new System.Windows.Forms.Padding(2);
             this.editCarButton.Name = "editCarButton";
             this.editCarButton.Size = new System.Drawing.Size(70, 23);
@@ -100,6 +100,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::AutoService.Properties.Resources.carFormBackGround;
             this.ClientSize = new System.Drawing.Size(1248, 387);
             this.Controls.Add(this.editCarButton);
             this.Controls.Add(this.carsDataGridView);
